@@ -1,0 +1,96 @@
+String_1: from index [0] to index [2]:
+A 
+A 
+B 
+String_2: from index [0] to index [3]:
+C 
+A 
+B 
+D 
+Content of buffer_1: 
+0 * 
+0 * 
+0 * 
+0 * 
+0 * 
+Content of buffer_2: 
+0 * 
+0 * 
+0 * 
+0 * 
+0 * 
+##############################################
+Processing Letter i = 0 of String_1
+String_1 letter = A
+Processing Letter j = 0 of String_2
+String_2 letter = C
+Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 1 of String_2
+String_2 letter = A
+Case 1: 
+buffer_2[2] = buffer_1[1] <--1
+Processing Letter j = 2 of String_2
+String_2 letter = B
+Case 3: 
+buffer_2[3] = buffer_2[2] <--1
+Processing Letter j = 3 of String_2
+String_2 letter = D
+Case 3: 
+buffer_2[4] = buffer_2[3] <--1
+Content of buffer_2 at the end of the loop: 
+0 * 
+0 * 
+1 * 
+1 * 
+1 * 
+##############################################
+Processing Letter i = 1 of String_1
+String_1 letter = A
+Processing Letter j = 0 of String_2
+String_2 letter = C
+Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 1 of String_2
+String_2 letter = A
+Case 1: 
+buffer_2[2] = buffer_1[1] <--1
+Processing Letter j = 2 of String_2
+String_2 letter = B
+Case 3: 
+buffer_2[3] = buffer_2[2] <--1
+Processing Letter j = 3 of String_2
+String_2 letter = D
+Case 3: 
+buffer_2[4] = buffer_2[3] <--1
+Content of buffer_2 at the end of the loop: 
+0 * 
+0 * 
+1 * 
+1 * 
+1 * 
+##############################################
+Processing Letter i = 2 of String_1
+String_1 letter = B
+Processing Letter j = 0 of String_2
+String_2 letter = C
+Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 1 of String_2
+String_2 letter = A
+Case 2: 
+buffer_2[2] = buffer_1[2] <--1
+Processing Letter j = 2 of String_2
+String_2 letter = B
+Case 1: 
+buffer_2[3] = buffer_1[2] <--2
+Processing Letter j = 3 of String_2
+String_2 letter = D
+Case 3: 
+buffer_2[4] = buffer_2[3] <--2
+Content of buffer_2 at the end of the loop: 
+0 * 
+0 * 
+1 * 
+2 * 
+2 * 
