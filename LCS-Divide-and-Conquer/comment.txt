@@ -1,0 +1,51 @@
+X = ABCDBAGZCDCA
+Y = BCADCGZ
+LCS should be BCDGZ, right?
+       0 1 2 3 4 5 6
+       B C A D C G Z
+0  A
+1  B
+2  C
+3  D
+4  B
+5  A
+6  G
+7  Z
+8  C
+9  D
+10 C
+11 A
+
+Midle Point of Y = 3
+Running the first iteration of space_efficient and backward,
+we get c + g array:
+  c+g
+0  4
+1  4
+2  5  <- Index that maximize c+g
+3  5
+4  5
+5  5
+6  5
+7  4
+8  4
+9  5
+10 5
+11 4
+
+So, now we call recursively on X[0:q], Y[0,middle] and X[q+1:m], Y[middle+1,n]:
+
+       0 1 2 3 4 5 6
+       B C A D C G Z
+0  A   * * * *
+1  B   * * * *
+2  C   * * * * <-- The problem is: D is never going to be in the LCS
+3  D           + + +
+4  B           + + +
+5  A           + + +
+6  G           + + + 
+7  Z           + + + 
+8  C           + + +
+9  D           + + +
+10 C           + + +
+11 A           + + +

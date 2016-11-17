@@ -1,0 +1,584 @@
+
+[452] Calling lcs_divide_and_conquer(String_1, String_2, 0, 11, 0, 6, Q_temp, LCS_Set)
+********************************************************
+Middle Point of String_2: 3
+Calling space_efficient_lcs_length(String_1, String_2, 0, 11, 0, 3, Q):
+
+############# space_efficient_lcs_length #############
+
+[36] String_1: from index [0] to index [11]:
+A 
+B 
+C 
+D 
+B 
+A 
+G 
+Z 
+C 
+D 
+C 
+A 
+[40] String_2: from index [0] to index [3]:
+B 
+C 
+A 
+D 
+Content of buffer_1: 
+0 | 0 | 0 | 0 | 0 | 
+Content of buffer_2: 
+0 | 0 | 0 | 0 | 0 | 
+For Loop:
+Processing Letter i = 0 of String_1
+String_1 letter = A
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[99] Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--0
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[82] Case 1: 
+buffer_2[3] = buffer_1[2] <--1
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[99] Case 3: 
+buffer_2[4] = buffer_2[3] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 0 * [2]: 0 * [3]: 1 * [4]: 1 * 
+For Loop:
+Processing Letter i = 1 of String_1
+String_1 letter = B
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[82] Case 1: 
+buffer_2[1] = buffer_1[0] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--1
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[99] Case 3: 
+buffer_2[3] = buffer_2[2] <--1
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[99] Case 3: 
+buffer_2[4] = buffer_2[3] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 1 * [3]: 1 * [4]: 1 * 
+For Loop:
+Processing Letter i = 2 of String_1
+String_1 letter = C
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[82] Case 1: 
+buffer_2[2] = buffer_1[1] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[99] Case 3: 
+buffer_2[3] = buffer_2[2] <--2
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[99] Case 3: 
+buffer_2[4] = buffer_2[3] <--2
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 2 * [4]: 2 * 
+For Loop:
+Processing Letter i = 3 of String_1
+String_1 letter = D
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[99] Case 3: 
+buffer_2[3] = buffer_2[2] <--2
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[82] Case 1: 
+buffer_2[4] = buffer_1[3] <--3
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 2 * [4]: 3 * 
+For Loop:
+Processing Letter i = 4 of String_1
+String_1 letter = B
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[82] Case 1: 
+buffer_2[1] = buffer_1[0] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[99] Case 3: 
+buffer_2[3] = buffer_2[2] <--2
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[91] Case 2: 
+buffer_2[4] = buffer_1[4] <--3
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 2 * [4]: 3 * 
+For Loop:
+Processing Letter i = 5 of String_1
+String_1 letter = A
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[82] Case 1: 
+buffer_2[3] = buffer_1[2] <--3
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[99] Case 3: 
+buffer_2[4] = buffer_2[3] <--3
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 3 * [4]: 3 * 
+For Loop:
+Processing Letter i = 6 of String_1
+String_1 letter = G
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[91] Case 2: 
+buffer_2[3] = buffer_1[3] <--3
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[99] Case 3: 
+buffer_2[4] = buffer_2[3] <--3
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 3 * [4]: 3 * 
+For Loop:
+Processing Letter i = 7 of String_1
+String_1 letter = Z
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[91] Case 2: 
+buffer_2[3] = buffer_1[3] <--3
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[99] Case 3: 
+buffer_2[4] = buffer_2[3] <--3
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 3 * [4]: 3 * 
+For Loop:
+Processing Letter i = 8 of String_1
+String_1 letter = C
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[82] Case 1: 
+buffer_2[2] = buffer_1[1] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[91] Case 2: 
+buffer_2[3] = buffer_1[3] <--3
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[99] Case 3: 
+buffer_2[4] = buffer_2[3] <--3
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 3 * [4]: 3 * 
+For Loop:
+Processing Letter i = 9 of String_1
+String_1 letter = D
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[91] Case 2: 
+buffer_2[3] = buffer_1[3] <--3
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[82] Case 1: 
+buffer_2[4] = buffer_1[3] <--4
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 3 * [4]: 4 * 
+For Loop:
+Processing Letter i = 10 of String_1
+String_1 letter = C
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[82] Case 1: 
+buffer_2[2] = buffer_1[1] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[91] Case 2: 
+buffer_2[3] = buffer_1[3] <--3
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[91] Case 2: 
+buffer_2[4] = buffer_1[4] <--4
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 3 * [4]: 4 * 
+For Loop:
+Processing Letter i = 11 of String_1
+String_1 letter = A
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Processing Letter j = 2 of String_2
+String_2 letter = A
+[82] Case 1: 
+buffer_2[3] = buffer_1[2] <--3
+Processing Letter j = 3 of String_2
+String_2 letter = D
+[91] Case 2: 
+buffer_2[4] = buffer_1[4] <--4
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * [3]: 3 * [4]: 4 * 
+---> Q: 
+[0]: 0 * 
+[1]: 1 * 
+[2]: 1 * 
+[3]: 2 * 
+[4]: 3 * 
+[5]: 3 * 
+[6]: 3 * 
+[7]: 3 * 
+[8]: 3 * 
+[9]: 3 * 
+[10]: 4 * 
+[11]: 4 * 
+[12]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 11, 4, 6, Q):
+
+---> Q: 
+[0]: 3 * 
+[1]: 4 * 
+[2]: 4 * 
+[3]: 4 * 
+[4]: 5 * 
+[5]: 5 * 
+[6]: 5 * 
+[7]: 4 * 
+[8]: 4 * 
+[9]: 4 * 
+[10]: 5 * 
+[11]: 4 * 
+[12]: 4 * 
+[395] q_index that maximizes c+g:4
+
+[409] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 3, 0, 3, Q, LCS_set)
+********************************************************
+Middle Point of String_2: 1
+Calling space_efficient_lcs_length(String_1, String_2, 0, 3, 0, 1, Q):
+
+############# space_efficient_lcs_length #############
+
+[36] String_1: from index [0] to index [3]:
+A 
+B 
+C 
+D 
+[40] String_2: from index [0] to index [1]:
+B 
+C 
+Content of buffer_1: 
+0 | 0 | 0 | 
+Content of buffer_2: 
+0 | 0 | 0 | 
+For Loop:
+Processing Letter i = 0 of String_1
+String_1 letter = A
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[99] Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--0
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 0 * [2]: 0 * 
+For Loop:
+Processing Letter i = 1 of String_1
+String_1 letter = B
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[82] Case 1: 
+buffer_2[1] = buffer_1[0] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 1 * 
+For Loop:
+Processing Letter i = 2 of String_1
+String_1 letter = C
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[82] Case 1: 
+buffer_2[2] = buffer_1[1] <--2
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * 
+For Loop:
+Processing Letter i = 3 of String_1
+String_1 letter = D
+Processing Letter j = 0 of String_2
+String_2 letter = B
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 1 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--2
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 2 * 
+---> Q: 
+[0]: 0 * 
+[1]: 0 * 
+[2]: 1 * 
+[3]: 2 * 
+[4]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 3, 2, 3, Q):
+
+---> Q: 
+[0]: 2 * 
+[1]: 1 * 
+[2]: 2 * 
+[3]: 3 * 
+[4]: 2 * 
+[395] q_index that maximizes c+g:3
+
+[409] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 2, 0, 1, Q, LCS_set)
+********************************************************
+[316] Base Case: String_2 size = 2
+
+[420] Calling recursively lcs_divide_and_conquer(String_1, String_2, 3, 3, 2, 3, Q, LCS_set)
+********************************************************
+[261] Base Case: String_1 size = 1
+
+[420] Calling recursively lcs_divide_and_conquer(String_1, String_2, 4, 11, 4, 6, Q, LCS_set)
+********************************************************
+Middle Point of String_2: 5
+Calling space_efficient_lcs_length(String_1, String_2, 4, 11, 4, 5, Q):
+
+############# space_efficient_lcs_length #############
+
+[36] String_1: from index [4] to index [11]:
+B 
+A 
+G 
+Z 
+C 
+D 
+C 
+A 
+[40] String_2: from index [4] to index [5]:
+C 
+G 
+Content of buffer_1: 
+0 | 0 | 0 | 
+Content of buffer_2: 
+0 | 0 | 0 | 
+For Loop:
+Processing Letter i = 4 of String_1
+String_1 letter = B
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--0
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 0 * [2]: 0 * 
+For Loop:
+Processing Letter i = 5 of String_1
+String_1 letter = A
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--0
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 0 * [2]: 0 * 
+For Loop:
+Processing Letter i = 6 of String_1
+String_1 letter = G
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[82] Case 1: 
+buffer_2[2] = buffer_1[1] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 0 * [2]: 1 * 
+For Loop:
+Processing Letter i = 7 of String_1
+String_1 letter = Z
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[99] Case 3: 
+buffer_2[1] = buffer_2[0] <--0
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[91] Case 2: 
+buffer_2[2] = buffer_1[2] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 0 * [2]: 1 * 
+For Loop:
+Processing Letter i = 8 of String_1
+String_1 letter = C
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[82] Case 1: 
+buffer_2[1] = buffer_1[0] <--1
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 1 * 
+For Loop:
+Processing Letter i = 9 of String_1
+String_1 letter = D
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 1 * 
+For Loop:
+Processing Letter i = 10 of String_1
+String_1 letter = C
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[82] Case 1: 
+buffer_2[1] = buffer_1[0] <--1
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 1 * 
+For Loop:
+Processing Letter i = 11 of String_1
+String_1 letter = A
+Processing Letter j = 4 of String_2
+String_2 letter = C
+[91] Case 2: 
+buffer_2[1] = buffer_1[1] <--1
+Processing Letter j = 5 of String_2
+String_2 letter = G
+[99] Case 3: 
+buffer_2[2] = buffer_2[1] <--1
+Content of buffer_2 at the end of the loop: 
+[0]: 0 * [1]: 1 * [2]: 1 * 
+---> Q: 
+[4]: 0 * 
+[5]: 0 * 
+[6]: 0 * 
+[7]: 1 * 
+[8]: 1 * 
+[9]: 1 * 
+[10]: 1 * 
+[11]: 1 * 
+[12]: 1 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 4, 11, 6, 6, Q):
+
+---> Q: 
+[4]: 1 * 
+[5]: 1 * 
+[6]: 1 * 
+[7]: 2 * 
+[8]: 1 * 
+[9]: 1 * 
+[10]: 1 * 
+[11]: 1 * 
+[12]: 1 * 
+[395] q_index that maximizes c+g:7
+
+[409] Calling recursively lcs_divide_and_conquer(String_1, String_2, 4, 6, 4, 5, Q, LCS_set)
+********************************************************
+[316] Base Case: String_2 size = 2
+
+[420] Calling recursively lcs_divide_and_conquer(String_1, String_2, 7, 11, 6, 6, Q, LCS_set)
+********************************************************
+[302] Base Case: String_2 size = 1
+Content of LCS_Set: 
+2
+3
+4
+7
+8
+At Index 1 of X: B
+At Index 2 of X: C
+At Index 3 of X: D
+At Index 6 of X: G
+At Index 7 of X: Z
