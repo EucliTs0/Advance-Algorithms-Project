@@ -1,3 +1,4 @@
+
 #define DEBUG 1
 #define DEBUG_SPACE_EFF_LCS 1
 #define TEST_SPACE_EFF_LCS 0
@@ -5,6 +6,7 @@
 #define TEST_BW_SPACE_EFF_LCS 0
 #define DEBUG_LCS_D_C 1
 
+#include <windows.h>
 #include <iostream>
 #include <string>
 #include <math.h>
