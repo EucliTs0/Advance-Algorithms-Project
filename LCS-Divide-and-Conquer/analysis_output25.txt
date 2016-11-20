@@ -1,0 +1,310 @@
+[472] Adding X[81]: T, Y[64]: T
+[472] Adding X[38]: A, Y[32]: A
+[472] Adding X[13]: T, Y[16]: T
+[472] Adding X[10]: T, Y[8]: T
+[472] Adding X[4]: C, Y[4]: C
+[472] Adding X[2]: C, Y[2]: C
+[290] Adding X[1]: T, Y[1]: T
+[290] Adding X[3]: C, Y[3]: C
+[371] Adding X[7]: T, Y[5]: T
+[314] Adding X[8]: G, Y[7]: G
+[329] Adding X[12]: T, Y[13]: T
+[472] Adding X[21]: G, Y[24]: G
+[472] Adding X[16]: T, Y[18]: T
+[329] Adding X[15]: T, Y[17]: T
+[329] Adding X[18]: T, Y[19]: T
+[314] Adding X[19]: G, Y[22]: G
+[329] Adding X[20]: T, Y[23]: T
+[472] Adding X[28]: C, Y[28]: C
+[472] Adding X[24]: T, Y[26]: T
+[314] Adding X[22]: G, Y[25]: G
+[349] Adding X[26]: G, Y[27]: G
+[472] Adding X[34]: T, Y[30]: T
+[349] Adding X[32]: C, Y[29]: C
+[349] Adding X[36]: C, Y[31]: C
+[472] Adding X[67]: A, Y[48]: A
+[472] Adding X[52]: T, Y[40]: T
+[472] Adding X[45]: T, Y[36]: T
+[472] Adding X[43]: G, Y[34]: G
+[349] Adding X[42]: G, Y[33]: G
+[290] Adding X[44]: G, Y[35]: G
+[472] Adding X[48]: T, Y[38]: T
+[349] Adding X[50]: C, Y[39]: C
+[472] Adding X[57]: G, Y[44]: G
+[472] Adding X[55]: C, Y[42]: C
+[329] Adding X[54]: G, Y[41]: G
+[290] Adding X[56]: C, Y[43]: C
+[472] Adding X[61]: C, Y[46]: C
+[349] Adding X[58]: A, Y[45]: A
+[349] Adding X[66]: C, Y[47]: C
+[472] Adding X[74]: G, Y[56]: G
+[472] Adding X[71]: G, Y[52]: G
+[472] Adding X[68]: T, Y[50]: T
+[314] Adding X[69]: C, Y[51]: C
+[314] Adding X[72]: A, Y[53]: A
+[329] Adding X[73]: A, Y[55]: A
+[290] Adding X[75]: T, Y[57]: T
+[371] Adding X[79]: T, Y[61]: T
+[290] Adding X[80]: G, Y[63]: G
+[472] Adding X[110]: C, Y[96]: C
+[472] Adding X[96]: C, Y[80]: C
+[472] Adding X[85]: A, Y[72]: A
+[472] Adding X[83]: G, Y[68]: G
+[290] Adding X[82]: A, Y[67]: A
+[290] Adding X[84]: A, Y[69]: A
+[472] Adding X[90]: G, Y[76]: G
+[472] Adding X[88]: A, Y[74]: A
+[314] Adding X[86]: C, Y[73]: C
+[290] Adding X[89]: G, Y[75]: G
+[290] Adding X[91]: G, Y[77]: G
+[349] Adding X[93]: A, Y[79]: A
+[472] Adding X[100]: C, Y[84]: C
+[290] Adding X[97]: A, Y[81]: A
+[314] Adding X[98]: A, Y[83]: A
+[314] Adding X[101]: A, Y[86]: A
+[329] Adding X[102]: C, Y[87]: C
+[472] Adding X[105]: A, Y[92]: A
+[314] Adding X[103]: G, Y[90]: G
+[472] Adding X[108]: G, Y[94]: G
+[314] Adding X[106]: C, Y[93]: C
+[290] Adding X[109]: C, Y[95]: C
+[472] Adding X[121]: G, Y[104]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 110, 120, 96, 103, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 99
+Calling space_efficient_lcs_length(String_1, String_2, 110, 120, 96, 99, Q):
+
+---> Q: 
+[110]: 0 * 
+[111]: 1 * 
+[112]: 1 * 
+[113]: 2 * 
+[114]: 2 * 
+[115]: 2 * 
+[116]: 2 * 
+[117]: 3 * 
+[118]: 3 * 
+[119]: 4 * 
+[120]: 4 * 
+[121]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 110, 120, 100, 103, Q):
+
+---> Q: 
+[110]: 4 * 
+[111]: 5 * 
+[112]: 5 * 
+[113]: 6 * 
+[114]: 6 * 
+[115]: 5 * 
+[116]: 5 * 
+[117]: 6 * 
+[118]: 5 * 
+[119]: 6 * 
+[120]: 5 * 
+[121]: 4 * 
+[453] q_index that maximizes c+g:113
+[472] Adding X[113]: A, Y[100]: A
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 110, 112, 96, 99, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[111]: G, Y[99]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 113, 120, 100, 103, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 101
+Calling space_efficient_lcs_length(String_1, String_2, 113, 120, 100, 101, Q):
+
+---> Q: 
+[113]: 0 * 
+[114]: 0 * 
+[115]: 1 * 
+[116]: 1 * 
+[117]: 1 * 
+[118]: 2 * 
+[119]: 2 * 
+[120]: 2 * 
+[121]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 113, 120, 102, 103, Q):
+
+---> Q: 
+[113]: 2 * 
+[114]: 2 * 
+[115]: 3 * 
+[116]: 3 * 
+[117]: 3 * 
+[118]: 4 * 
+[119]: 4 * 
+[120]: 3 * 
+[121]: 2 * 
+[453] q_index that maximizes c+g:118
+[472] Adding X[118]: G, Y[102]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 113, 117, 100, 101, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[115]: G, Y[101]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 118, 120, 102, 103, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[119]: A, Y[103]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 121, 121, 104, 111, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[122]: G, Y[106]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 122, 127, 112, 127, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 119
+Calling space_efficient_lcs_length(String_1, String_2, 122, 127, 112, 119, Q):
+
+---> Q: 
+[122]: 0 * 
+[123]: 1 * 
+[124]: 2 * 
+[125]: 3 * 
+[126]: 4 * 
+[127]: 4 * 
+[128]: 5 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 122, 127, 120, 127, Q):
+
+---> Q: 
+[122]: 4 * 
+[123]: 5 * 
+[124]: 5 * 
+[125]: 6 * 
+[126]: 6 * 
+[127]: 5 * 
+[128]: 5 * 
+[453] q_index that maximizes c+g:125
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 122, 124, 112, 119, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 115
+Calling space_efficient_lcs_length(String_1, String_2, 122, 124, 112, 115, Q):
+
+---> Q: 
+[122]: 0 * 
+[123]: 1 * 
+[124]: 1 * 
+[125]: 1 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 122, 124, 116, 119, Q):
+
+---> Q: 
+[122]: 2 * 
+[123]: 3 * 
+[124]: 2 * 
+[125]: 1 * 
+[453] q_index that maximizes c+g:123
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 122, 122, 112, 115, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[123]: C, Y[113]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 123, 124, 116, 119, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[124]: C, Y[117]: C
+[329] Adding X[125]: C, Y[118]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 125, 127, 120, 127, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[126]: T, Y[121]: T
+[329] Adding X[127]: G, Y[125]: G
+At Index 0 of X: T
+At Index 1 of X: C
+At Index 2 of X: C
+At Index 3 of X: C
+At Index 6 of X: T
+At Index 7 of X: G
+At Index 9 of X: T
+At Index 11 of X: T
+At Index 12 of X: T
+At Index 14 of X: T
+At Index 15 of X: T
+At Index 17 of X: T
+At Index 18 of X: G
+At Index 19 of X: T
+At Index 20 of X: G
+At Index 21 of X: G
+At Index 23 of X: T
+At Index 25 of X: G
+At Index 27 of X: C
+At Index 31 of X: C
+At Index 33 of X: T
+At Index 35 of X: C
+At Index 37 of X: A
+At Index 41 of X: G
+At Index 42 of X: G
+At Index 43 of X: G
+At Index 44 of X: T
+At Index 47 of X: T
+At Index 49 of X: C
+At Index 51 of X: T
+At Index 53 of X: G
+At Index 54 of X: C
+At Index 55 of X: C
+At Index 56 of X: G
+At Index 57 of X: A
+At Index 60 of X: C
+At Index 65 of X: C
+At Index 66 of X: A
+At Index 67 of X: T
+At Index 68 of X: C
+At Index 70 of X: G
+At Index 71 of X: A
+At Index 72 of X: A
+At Index 73 of X: G
+At Index 74 of X: T
+At Index 78 of X: T
+At Index 79 of X: G
+At Index 80 of X: T
+At Index 81 of X: A
+At Index 82 of X: G
+At Index 83 of X: A
+At Index 84 of X: A
+At Index 85 of X: C
+At Index 87 of X: A
+At Index 88 of X: G
+At Index 89 of X: G
+At Index 90 of X: G
+At Index 92 of X: A
+At Index 95 of X: C
+At Index 96 of X: A
+At Index 97 of X: A
+At Index 99 of X: C
+At Index 100 of X: A
+At Index 101 of X: C
+At Index 102 of X: G
+At Index 104 of X: A
+At Index 105 of X: C
+At Index 107 of X: G
+At Index 108 of X: C
+At Index 109 of X: C
+At Index 110 of X: G
+At Index 112 of X: A
+At Index 114 of X: G
+At Index 117 of X: G
+At Index 118 of X: A
+At Index 120 of X: G
+At Index 121 of X: G
+At Index 122 of X: C
+At Index 123 of X: C
+At Index 124 of X: C
+At Index 125 of X: T
+At Index 126 of X: G
+At Index 127 of X: A
+Length of the LCS: 83

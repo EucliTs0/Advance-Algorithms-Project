@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1479625897 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\test.cpp
+	<fstream>
+	<string>
+	<iostream>
+	<set>
+	<utility>
+	<sstream>
+	"lcsdc.h"
+
+1479571475 c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcsdc.h
+	<string>
+	<math.h>
+	<set>
+	<utility>
+
+1446667744 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcs_dc\main.cpp
+	<iostream>
+
+1479595031 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcs_divide_and_conquer.cpp
+	<windows.h>
+	<iostream>
+	<string>
+	<math.h>
+	<set>
+	<utility>
+

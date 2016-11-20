@@ -1,0 +1,2470 @@
+
+[598] Calling lcs_divide_and_conquer(String_1, String_2, 0, 127, 0, 127, Q_temp, LCS_Set, LCS_XSet, LCS_YSet)
+********************************************************
+Middle Point of String_2: 63
+Calling space_efficient_lcs_length(String_1, String_2, 0, 127, 0, 63, Q):
+
+---> Q: 
+[0]: 0 * 
+[1]: 1 * 
+[2]: 2 * 
+[3]: 3 * 
+[4]: 4 * 
+[5]: 5 * 
+[6]: 6 * 
+[7]: 7 * 
+[8]: 8 * 
+[9]: 9 * 
+[10]: 10 * 
+[11]: 11 * 
+[12]: 12 * 
+[13]: 13 * 
+[14]: 14 * 
+[15]: 15 * 
+[16]: 16 * 
+[17]: 17 * 
+[18]: 18 * 
+[19]: 19 * 
+[20]: 20 * 
+[21]: 21 * 
+[22]: 22 * 
+[23]: 22 * 
+[24]: 23 * 
+[25]: 23 * 
+[26]: 24 * 
+[27]: 25 * 
+[28]: 25 * 
+[29]: 26 * 
+[30]: 27 * 
+[31]: 28 * 
+[32]: 28 * 
+[33]: 28 * 
+[34]: 29 * 
+[35]: 29 * 
+[36]: 29 * 
+[37]: 29 * 
+[38]: 29 * 
+[39]: 30 * 
+[40]: 30 * 
+[41]: 31 * 
+[42]: 32 * 
+[43]: 33 * 
+[44]: 34 * 
+[45]: 35 * 
+[46]: 35 * 
+[47]: 36 * 
+[48]: 37 * 
+[49]: 37 * 
+[50]: 37 * 
+[51]: 37 * 
+[52]: 37 * 
+[53]: 37 * 
+[54]: 37 * 
+[55]: 37 * 
+[56]: 37 * 
+[57]: 38 * 
+[58]: 38 * 
+[59]: 38 * 
+[60]: 39 * 
+[61]: 40 * 
+[62]: 40 * 
+[63]: 40 * 
+[64]: 41 * 
+[65]: 42 * 
+[66]: 42 * 
+[67]: 42 * 
+[68]: 43 * 
+[69]: 43 * 
+[70]: 43 * 
+[71]: 44 * 
+[72]: 44 * 
+[73]: 44 * 
+[74]: 45 * 
+[75]: 46 * 
+[76]: 46 * 
+[77]: 46 * 
+[78]: 46 * 
+[79]: 46 * 
+[80]: 47 * 
+[81]: 48 * 
+[82]: 48 * 
+[83]: 49 * 
+[84]: 49 * 
+[85]: 49 * 
+[86]: 49 * 
+[87]: 49 * 
+[88]: 49 * 
+[89]: 50 * 
+[90]: 50 * 
+[91]: 50 * 
+[92]: 51 * 
+[93]: 51 * 
+[94]: 51 * 
+[95]: 51 * 
+[96]: 51 * 
+[97]: 51 * 
+[98]: 51 * 
+[99]: 51 * 
+[100]: 51 * 
+[101]: 51 * 
+[102]: 51 * 
+[103]: 51 * 
+[104]: 52 * 
+[105]: 52 * 
+[106]: 52 * 
+[107]: 52 * 
+[108]: 52 * 
+[109]: 52 * 
+[110]: 52 * 
+[111]: 52 * 
+[112]: 52 * 
+[113]: 52 * 
+[114]: 52 * 
+[115]: 52 * 
+[116]: 53 * 
+[117]: 53 * 
+[118]: 53 * 
+[119]: 53 * 
+[120]: 53 * 
+[121]: 53 * 
+[122]: 53 * 
+[123]: 53 * 
+[124]: 53 * 
+[125]: 53 * 
+[126]: 53 * 
+[127]: 53 * 
+[128]: 53 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 127, 64, 127, Q):
+
+---> Q: 
+[0]: 50 * 
+[1]: 51 * 
+[2]: 52 * 
+[3]: 53 * 
+[4]: 53 * 
+[5]: 54 * 
+[6]: 55 * 
+[7]: 56 * 
+[8]: 57 * 
+[9]: 58 * 
+[10]: 59 * 
+[11]: 60 * 
+[12]: 61 * 
+[13]: 62 * 
+[14]: 62 * 
+[15]: 63 * 
+[16]: 64 * 
+[17]: 65 * 
+[18]: 66 * 
+[19]: 67 * 
+[20]: 68 * 
+[21]: 69 * 
+[22]: 70 * 
+[23]: 70 * 
+[24]: 71 * 
+[25]: 71 * 
+[26]: 72 * 
+[27]: 73 * 
+[28]: 72 * 
+[29]: 73 * 
+[30]: 74 * 
+[31]: 75 * 
+[32]: 74 * 
+[33]: 73 * 
+[34]: 74 * 
+[35]: 74 * 
+[36]: 73 * 
+[37]: 73 * 
+[38]: 73 * 
+[39]: 73 * 
+[40]: 73 * 
+[41]: 74 * 
+[42]: 75 * 
+[43]: 76 * 
+[44]: 77 * 
+[45]: 78 * 
+[46]: 77 * 
+[47]: 77 * 
+[48]: 78 * 
+[49]: 78 * 
+[50]: 78 * 
+[51]: 77 * 
+[52]: 77 * 
+[53]: 76 * 
+[54]: 76 * 
+[55]: 76 * 
+[56]: 75 * 
+[57]: 76 * 
+[58]: 76 * 
+[59]: 76 * 
+[60]: 77 * 
+[61]: 78 * 
+[62]: 78 * 
+[63]: 78 * 
+[64]: 79 * 
+[65]: 80 * 
+[66]: 80 * 
+[67]: 80 * 
+[68]: 81 * 
+[69]: 80 * 
+[70]: 80 * 
+[71]: 81 * 
+[72]: 81 * 
+[73]: 81 * 
+[74]: 81 * 
+[75]: 82 * 
+[76]: 82 * 
+[77]: 82 * 
+[78]: 82 * 
+[79]: 82 * 
+[80]: 82 * 
+[81]: 83 * 
+[82]: 83 * 
+[83]: 83 * 
+[84]: 82 * 
+[85]: 81 * 
+[86]: 81 * 
+[87]: 80 * 
+[88]: 80 * 
+[89]: 81 * 
+[90]: 80 * 
+[91]: 79 * 
+[92]: 80 * 
+[93]: 79 * 
+[94]: 79 * 
+[95]: 79 * 
+[96]: 78 * 
+[97]: 78 * 
+[98]: 77 * 
+[99]: 76 * 
+[100]: 76 * 
+[101]: 76 * 
+[102]: 75 * 
+[103]: 74 * 
+[104]: 74 * 
+[105]: 74 * 
+[106]: 74 * 
+[107]: 73 * 
+[108]: 72 * 
+[109]: 71 * 
+[110]: 70 * 
+[111]: 69 * 
+[112]: 68 * 
+[113]: 67 * 
+[114]: 66 * 
+[115]: 65 * 
+[116]: 65 * 
+[117]: 64 * 
+[118]: 63 * 
+[119]: 62 * 
+[120]: 61 * 
+[121]: 60 * 
+[122]: 59 * 
+[123]: 58 * 
+[124]: 57 * 
+[125]: 56 * 
+[126]: 55 * 
+[127]: 54 * 
+[128]: 53 * 
+[453] q_index that maximizes c+g:81
+[472] Adding X[81]: T, Y[64]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 80, 0, 63, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 31
+Calling space_efficient_lcs_length(String_1, String_2, 0, 80, 0, 31, Q):
+
+---> Q: 
+[0]: 0 * 
+[1]: 1 * 
+[2]: 2 * 
+[3]: 3 * 
+[4]: 4 * 
+[5]: 5 * 
+[6]: 6 * 
+[7]: 7 * 
+[8]: 8 * 
+[9]: 9 * 
+[10]: 10 * 
+[11]: 11 * 
+[12]: 12 * 
+[13]: 12 * 
+[14]: 13 * 
+[15]: 13 * 
+[16]: 13 * 
+[17]: 13 * 
+[18]: 13 * 
+[19]: 14 * 
+[20]: 15 * 
+[21]: 16 * 
+[22]: 16 * 
+[23]: 17 * 
+[24]: 17 * 
+[25]: 18 * 
+[26]: 18 * 
+[27]: 18 * 
+[28]: 19 * 
+[29]: 19 * 
+[30]: 20 * 
+[31]: 20 * 
+[32]: 21 * 
+[33]: 22 * 
+[34]: 22 * 
+[35]: 22 * 
+[36]: 22 * 
+[37]: 22 * 
+[38]: 23 * 
+[39]: 23 * 
+[40]: 23 * 
+[41]: 23 * 
+[42]: 23 * 
+[43]: 23 * 
+[44]: 23 * 
+[45]: 23 * 
+[46]: 23 * 
+[47]: 23 * 
+[48]: 23 * 
+[49]: 23 * 
+[50]: 23 * 
+[51]: 23 * 
+[52]: 23 * 
+[53]: 24 * 
+[54]: 24 * 
+[55]: 24 * 
+[56]: 24 * 
+[57]: 24 * 
+[58]: 25 * 
+[59]: 25 * 
+[60]: 25 * 
+[61]: 25 * 
+[62]: 26 * 
+[63]: 26 * 
+[64]: 26 * 
+[65]: 26 * 
+[66]: 26 * 
+[67]: 26 * 
+[68]: 26 * 
+[69]: 26 * 
+[70]: 27 * 
+[71]: 27 * 
+[72]: 27 * 
+[73]: 27 * 
+[74]: 27 * 
+[75]: 27 * 
+[76]: 27 * 
+[77]: 27 * 
+[78]: 27 * 
+[79]: 27 * 
+[80]: 27 * 
+[81]: 27 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 80, 32, 63, Q):
+
+---> Q: 
+[0]: 29 * 
+[1]: 30 * 
+[2]: 31 * 
+[3]: 32 * 
+[4]: 33 * 
+[5]: 34 * 
+[6]: 35 * 
+[7]: 36 * 
+[8]: 36 * 
+[9]: 37 * 
+[10]: 38 * 
+[11]: 39 * 
+[12]: 40 * 
+[13]: 40 * 
+[14]: 41 * 
+[15]: 41 * 
+[16]: 41 * 
+[17]: 41 * 
+[18]: 41 * 
+[19]: 41 * 
+[20]: 42 * 
+[21]: 43 * 
+[22]: 43 * 
+[23]: 44 * 
+[24]: 44 * 
+[25]: 45 * 
+[26]: 44 * 
+[27]: 43 * 
+[28]: 44 * 
+[29]: 44 * 
+[30]: 45 * 
+[31]: 45 * 
+[32]: 46 * 
+[33]: 47 * 
+[34]: 47 * 
+[35]: 47 * 
+[36]: 47 * 
+[37]: 47 * 
+[38]: 48 * 
+[39]: 48 * 
+[40]: 48 * 
+[41]: 48 * 
+[42]: 48 * 
+[43]: 48 * 
+[44]: 47 * 
+[45]: 47 * 
+[46]: 46 * 
+[47]: 45 * 
+[48]: 44 * 
+[49]: 44 * 
+[50]: 43 * 
+[51]: 42 * 
+[52]: 41 * 
+[53]: 42 * 
+[54]: 41 * 
+[55]: 41 * 
+[56]: 41 * 
+[57]: 40 * 
+[58]: 41 * 
+[59]: 41 * 
+[60]: 40 * 
+[61]: 40 * 
+[62]: 41 * 
+[63]: 41 * 
+[64]: 40 * 
+[65]: 39 * 
+[66]: 38 * 
+[67]: 38 * 
+[68]: 37 * 
+[69]: 36 * 
+[70]: 37 * 
+[71]: 36 * 
+[72]: 35 * 
+[73]: 35 * 
+[74]: 34 * 
+[75]: 33 * 
+[76]: 32 * 
+[77]: 31 * 
+[78]: 30 * 
+[79]: 29 * 
+[80]: 28 * 
+[81]: 27 * 
+[453] q_index that maximizes c+g:38
+[472] Adding X[38]: A, Y[32]: A
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 37, 0, 31, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 15
+Calling space_efficient_lcs_length(String_1, String_2, 0, 37, 0, 15, Q):
+
+---> Q: 
+[0]: 0 * 
+[1]: 1 * 
+[2]: 2 * 
+[3]: 3 * 
+[4]: 4 * 
+[5]: 5 * 
+[6]: 5 * 
+[7]: 6 * 
+[8]: 6 * 
+[9]: 6 * 
+[10]: 7 * 
+[11]: 7 * 
+[12]: 8 * 
+[13]: 9 * 
+[14]: 9 * 
+[15]: 9 * 
+[16]: 9 * 
+[17]: 9 * 
+[18]: 9 * 
+[19]: 9 * 
+[20]: 9 * 
+[21]: 9 * 
+[22]: 9 * 
+[23]: 10 * 
+[24]: 11 * 
+[25]: 11 * 
+[26]: 11 * 
+[27]: 11 * 
+[28]: 11 * 
+[29]: 11 * 
+[30]: 12 * 
+[31]: 12 * 
+[32]: 12 * 
+[33]: 12 * 
+[34]: 13 * 
+[35]: 13 * 
+[36]: 13 * 
+[37]: 13 * 
+[38]: 14 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 37, 16, 31, Q):
+
+---> Q: 
+[0]: 14 * 
+[1]: 15 * 
+[2]: 16 * 
+[3]: 17 * 
+[4]: 18 * 
+[5]: 19 * 
+[6]: 19 * 
+[7]: 20 * 
+[8]: 20 * 
+[9]: 20 * 
+[10]: 21 * 
+[11]: 21 * 
+[12]: 22 * 
+[13]: 23 * 
+[14]: 23 * 
+[15]: 23 * 
+[16]: 22 * 
+[17]: 22 * 
+[18]: 21 * 
+[19]: 21 * 
+[20]: 20 * 
+[21]: 20 * 
+[22]: 20 * 
+[23]: 21 * 
+[24]: 21 * 
+[25]: 20 * 
+[26]: 19 * 
+[27]: 18 * 
+[28]: 18 * 
+[29]: 17 * 
+[30]: 17 * 
+[31]: 16 * 
+[32]: 16 * 
+[33]: 16 * 
+[34]: 16 * 
+[35]: 15 * 
+[36]: 15 * 
+[37]: 14 * 
+[38]: 14 * 
+[453] q_index that maximizes c+g:13
+[472] Adding X[13]: T, Y[16]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 12, 0, 15, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 7
+Calling space_efficient_lcs_length(String_1, String_2, 0, 12, 0, 7, Q):
+
+---> Q: 
+[0]: 0 * 
+[1]: 1 * 
+[2]: 2 * 
+[3]: 3 * 
+[4]: 4 * 
+[5]: 4 * 
+[6]: 5 * 
+[7]: 6 * 
+[8]: 6 * 
+[9]: 6 * 
+[10]: 7 * 
+[11]: 7 * 
+[12]: 7 * 
+[13]: 7 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 12, 8, 15, Q):
+
+---> Q: 
+[0]: 3 * 
+[1]: 4 * 
+[2]: 5 * 
+[3]: 6 * 
+[4]: 7 * 
+[5]: 6 * 
+[6]: 7 * 
+[7]: 8 * 
+[8]: 8 * 
+[9]: 8 * 
+[10]: 9 * 
+[11]: 9 * 
+[12]: 8 * 
+[13]: 7 * 
+[453] q_index that maximizes c+g:10
+[472] Adding X[10]: T, Y[8]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 9, 0, 7, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 3
+Calling space_efficient_lcs_length(String_1, String_2, 0, 9, 0, 3, Q):
+
+---> Q: 
+[0]: 0 * 
+[1]: 1 * 
+[2]: 2 * 
+[3]: 3 * 
+[4]: 4 * 
+[5]: 4 * 
+[6]: 4 * 
+[7]: 4 * 
+[8]: 4 * 
+[9]: 4 * 
+[10]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 9, 4, 7, Q):
+
+---> Q: 
+[0]: 4 * 
+[1]: 4 * 
+[2]: 5 * 
+[3]: 6 * 
+[4]: 7 * 
+[5]: 7 * 
+[6]: 7 * 
+[7]: 6 * 
+[8]: 6 * 
+[9]: 5 * 
+[10]: 4 * 
+[453] q_index that maximizes c+g:4
+[472] Adding X[4]: C, Y[4]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 3, 0, 3, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 1
+Calling space_efficient_lcs_length(String_1, String_2, 0, 3, 0, 1, Q):
+
+---> Q: 
+[0]: 0 * 
+[1]: 1 * 
+[2]: 2 * 
+[3]: 2 * 
+[4]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 0, 3, 2, 3, Q):
+
+---> Q: 
+[0]: 2 * 
+[1]: 3 * 
+[2]: 4 * 
+[3]: 3 * 
+[4]: 2 * 
+[453] q_index that maximizes c+g:2
+[472] Adding X[2]: C, Y[2]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 0, 1, 0, 1, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[1]: T, Y[1]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 2, 3, 2, 3, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[3]: C, Y[3]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 4, 9, 4, 7, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 5
+Calling space_efficient_lcs_length(String_1, String_2, 4, 9, 4, 5, Q):
+
+---> Q: 
+[4]: 0 * 
+[5]: 0 * 
+[6]: 0 * 
+[7]: 1 * 
+[8]: 1 * 
+[9]: 1 * 
+[10]: 1 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 4, 9, 6, 7, Q):
+
+---> Q: 
+[4]: 2 * 
+[5]: 2 * 
+[6]: 2 * 
+[7]: 3 * 
+[8]: 3 * 
+[9]: 2 * 
+[10]: 1 * 
+[453] q_index that maximizes c+g:7
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 4, 6, 4, 5, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[358] Base Case: String_2 size = 2
+[371] Adding X[7]: T, Y[5]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 7, 9, 6, 7, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[8]: G, Y[7]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 10, 12, 8, 15, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[329] Adding X[12]: T, Y[13]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 13, 37, 16, 31, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 23
+Calling space_efficient_lcs_length(String_1, String_2, 13, 37, 16, 23, Q):
+
+---> Q: 
+[13]: 0 * 
+[14]: 0 * 
+[15]: 1 * 
+[16]: 2 * 
+[17]: 3 * 
+[18]: 4 * 
+[19]: 5 * 
+[20]: 5 * 
+[21]: 6 * 
+[22]: 6 * 
+[23]: 6 * 
+[24]: 6 * 
+[25]: 6 * 
+[26]: 6 * 
+[27]: 7 * 
+[28]: 7 * 
+[29]: 7 * 
+[30]: 7 * 
+[31]: 8 * 
+[32]: 8 * 
+[33]: 8 * 
+[34]: 8 * 
+[35]: 8 * 
+[36]: 8 * 
+[37]: 8 * 
+[38]: 8 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 13, 37, 24, 31, Q):
+
+---> Q: 
+[13]: 8 * 
+[14]: 8 * 
+[15]: 9 * 
+[16]: 10 * 
+[17]: 11 * 
+[18]: 12 * 
+[19]: 13 * 
+[20]: 13 * 
+[21]: 14 * 
+[22]: 13 * 
+[23]: 13 * 
+[24]: 13 * 
+[25]: 13 * 
+[26]: 13 * 
+[27]: 14 * 
+[28]: 14 * 
+[29]: 13 * 
+[30]: 12 * 
+[31]: 12 * 
+[32]: 11 * 
+[33]: 11 * 
+[34]: 10 * 
+[35]: 10 * 
+[36]: 10 * 
+[37]: 9 * 
+[38]: 8 * 
+[453] q_index that maximizes c+g:21
+[472] Adding X[21]: G, Y[24]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 13, 20, 16, 23, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 19
+Calling space_efficient_lcs_length(String_1, String_2, 13, 20, 16, 19, Q):
+
+---> Q: 
+[13]: 0 * 
+[14]: 0 * 
+[15]: 1 * 
+[16]: 2 * 
+[17]: 2 * 
+[18]: 3 * 
+[19]: 3 * 
+[20]: 3 * 
+[21]: 3 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 13, 20, 20, 23, Q):
+
+---> Q: 
+[13]: 3 * 
+[14]: 3 * 
+[15]: 4 * 
+[16]: 5 * 
+[17]: 5 * 
+[18]: 6 * 
+[19]: 5 * 
+[20]: 4 * 
+[21]: 3 * 
+[453] q_index that maximizes c+g:18
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 13, 17, 16, 19, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 17
+Calling space_efficient_lcs_length(String_1, String_2, 13, 17, 16, 17, Q):
+
+---> Q: 
+[13]: 0 * 
+[14]: 0 * 
+[15]: 1 * 
+[16]: 2 * 
+[17]: 2 * 
+[18]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 13, 17, 18, 19, Q):
+
+---> Q: 
+[13]: 1 * 
+[14]: 1 * 
+[15]: 2 * 
+[16]: 3 * 
+[17]: 3 * 
+[18]: 2 * 
+[453] q_index that maximizes c+g:16
+[472] Adding X[16]: T, Y[18]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 13, 15, 16, 17, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[329] Adding X[15]: T, Y[17]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 16, 17, 18, 19, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[329] Adding X[18]: T, Y[19]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 18, 20, 20, 23, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[19]: G, Y[22]: G
+[329] Adding X[20]: T, Y[23]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 21, 37, 24, 31, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 27
+Calling space_efficient_lcs_length(String_1, String_2, 21, 37, 24, 27, Q):
+
+---> Q: 
+[21]: 0 * 
+[22]: 1 * 
+[23]: 1 * 
+[24]: 2 * 
+[25]: 2 * 
+[26]: 3 * 
+[27]: 3 * 
+[28]: 4 * 
+[29]: 4 * 
+[30]: 4 * 
+[31]: 4 * 
+[32]: 4 * 
+[33]: 4 * 
+[34]: 4 * 
+[35]: 4 * 
+[36]: 4 * 
+[37]: 4 * 
+[38]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 21, 37, 28, 31, Q):
+
+---> Q: 
+[21]: 4 * 
+[22]: 5 * 
+[23]: 5 * 
+[24]: 6 * 
+[25]: 6 * 
+[26]: 7 * 
+[27]: 7 * 
+[28]: 8 * 
+[29]: 8 * 
+[30]: 8 * 
+[31]: 8 * 
+[32]: 7 * 
+[33]: 7 * 
+[34]: 6 * 
+[35]: 6 * 
+[36]: 5 * 
+[37]: 5 * 
+[38]: 4 * 
+[453] q_index that maximizes c+g:28
+[472] Adding X[28]: C, Y[28]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 21, 27, 24, 27, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 25
+Calling space_efficient_lcs_length(String_1, String_2, 21, 27, 24, 25, Q):
+
+---> Q: 
+[21]: 0 * 
+[22]: 1 * 
+[23]: 1 * 
+[24]: 2 * 
+[25]: 2 * 
+[26]: 2 * 
+[27]: 2 * 
+[28]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 21, 27, 26, 27, Q):
+
+---> Q: 
+[21]: 2 * 
+[22]: 3 * 
+[23]: 3 * 
+[24]: 4 * 
+[25]: 4 * 
+[26]: 4 * 
+[27]: 3 * 
+[28]: 2 * 
+[453] q_index that maximizes c+g:24
+[472] Adding X[24]: T, Y[26]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 21, 23, 24, 25, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[22]: G, Y[25]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 24, 27, 26, 27, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[26]: G, Y[27]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 28, 37, 28, 31, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 29
+Calling space_efficient_lcs_length(String_1, String_2, 28, 37, 28, 29, Q):
+
+---> Q: 
+[28]: 0 * 
+[29]: 0 * 
+[30]: 1 * 
+[31]: 1 * 
+[32]: 1 * 
+[33]: 1 * 
+[34]: 2 * 
+[35]: 2 * 
+[36]: 2 * 
+[37]: 2 * 
+[38]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 28, 37, 30, 31, Q):
+
+---> Q: 
+[28]: 2 * 
+[29]: 2 * 
+[30]: 3 * 
+[31]: 3 * 
+[32]: 3 * 
+[33]: 3 * 
+[34]: 4 * 
+[35]: 4 * 
+[36]: 3 * 
+[37]: 3 * 
+[38]: 2 * 
+[453] q_index that maximizes c+g:34
+[472] Adding X[34]: T, Y[30]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 28, 33, 28, 29, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[32]: C, Y[29]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 34, 37, 30, 31, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[36]: C, Y[31]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 38, 80, 32, 63, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 47
+Calling space_efficient_lcs_length(String_1, String_2, 38, 80, 32, 47, Q):
+
+---> Q: 
+[38]: 0 * 
+[39]: 1 * 
+[40]: 2 * 
+[41]: 2 * 
+[42]: 3 * 
+[43]: 4 * 
+[44]: 4 * 
+[45]: 4 * 
+[46]: 5 * 
+[47]: 6 * 
+[48]: 6 * 
+[49]: 7 * 
+[50]: 8 * 
+[51]: 9 * 
+[52]: 9 * 
+[53]: 10 * 
+[54]: 10 * 
+[55]: 10 * 
+[56]: 10 * 
+[57]: 11 * 
+[58]: 12 * 
+[59]: 13 * 
+[60]: 13 * 
+[61]: 13 * 
+[62]: 14 * 
+[63]: 14 * 
+[64]: 14 * 
+[65]: 14 * 
+[66]: 14 * 
+[67]: 15 * 
+[68]: 15 * 
+[69]: 15 * 
+[70]: 15 * 
+[71]: 15 * 
+[72]: 15 * 
+[73]: 15 * 
+[74]: 15 * 
+[75]: 15 * 
+[76]: 15 * 
+[77]: 15 * 
+[78]: 15 * 
+[79]: 15 * 
+[80]: 15 * 
+[81]: 15 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 38, 80, 48, 63, Q):
+
+---> Q: 
+[38]: 14 * 
+[39]: 15 * 
+[40]: 16 * 
+[41]: 16 * 
+[42]: 17 * 
+[43]: 18 * 
+[44]: 18 * 
+[45]: 18 * 
+[46]: 19 * 
+[47]: 19 * 
+[48]: 19 * 
+[49]: 20 * 
+[50]: 21 * 
+[51]: 22 * 
+[52]: 22 * 
+[53]: 23 * 
+[54]: 22 * 
+[55]: 22 * 
+[56]: 22 * 
+[57]: 22 * 
+[58]: 23 * 
+[59]: 24 * 
+[60]: 23 * 
+[61]: 23 * 
+[62]: 24 * 
+[63]: 24 * 
+[64]: 24 * 
+[65]: 24 * 
+[66]: 24 * 
+[67]: 25 * 
+[68]: 24 * 
+[69]: 23 * 
+[70]: 23 * 
+[71]: 22 * 
+[72]: 22 * 
+[73]: 22 * 
+[74]: 21 * 
+[75]: 20 * 
+[76]: 20 * 
+[77]: 19 * 
+[78]: 18 * 
+[79]: 17 * 
+[80]: 16 * 
+[81]: 15 * 
+[453] q_index that maximizes c+g:67
+[472] Adding X[67]: A, Y[48]: A
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 38, 66, 32, 47, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 39
+Calling space_efficient_lcs_length(String_1, String_2, 38, 66, 32, 39, Q):
+
+---> Q: 
+[38]: 0 * 
+[39]: 1 * 
+[40]: 1 * 
+[41]: 2 * 
+[42]: 2 * 
+[43]: 2 * 
+[44]: 3 * 
+[45]: 4 * 
+[46]: 4 * 
+[47]: 4 * 
+[48]: 5 * 
+[49]: 5 * 
+[50]: 6 * 
+[51]: 6 * 
+[52]: 7 * 
+[53]: 7 * 
+[54]: 7 * 
+[55]: 7 * 
+[56]: 7 * 
+[57]: 7 * 
+[58]: 7 * 
+[59]: 7 * 
+[60]: 8 * 
+[61]: 8 * 
+[62]: 8 * 
+[63]: 8 * 
+[64]: 8 * 
+[65]: 8 * 
+[66]: 8 * 
+[67]: 8 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 38, 66, 40, 47, Q):
+
+---> Q: 
+[38]: 8 * 
+[39]: 9 * 
+[40]: 9 * 
+[41]: 10 * 
+[42]: 10 * 
+[43]: 10 * 
+[44]: 11 * 
+[45]: 12 * 
+[46]: 12 * 
+[47]: 12 * 
+[48]: 13 * 
+[49]: 13 * 
+[50]: 14 * 
+[51]: 14 * 
+[52]: 15 * 
+[53]: 15 * 
+[54]: 14 * 
+[55]: 13 * 
+[56]: 12 * 
+[57]: 11 * 
+[58]: 11 * 
+[59]: 11 * 
+[60]: 12 * 
+[61]: 11 * 
+[62]: 11 * 
+[63]: 10 * 
+[64]: 10 * 
+[65]: 10 * 
+[66]: 9 * 
+[67]: 8 * 
+[453] q_index that maximizes c+g:52
+[472] Adding X[52]: T, Y[40]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 38, 51, 32, 39, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 35
+Calling space_efficient_lcs_length(String_1, String_2, 38, 51, 32, 35, Q):
+
+---> Q: 
+[38]: 0 * 
+[39]: 0 * 
+[40]: 0 * 
+[41]: 1 * 
+[42]: 1 * 
+[43]: 2 * 
+[44]: 3 * 
+[45]: 4 * 
+[46]: 4 * 
+[47]: 4 * 
+[48]: 4 * 
+[49]: 4 * 
+[50]: 4 * 
+[51]: 4 * 
+[52]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 38, 51, 36, 39, Q):
+
+---> Q: 
+[38]: 4 * 
+[39]: 3 * 
+[40]: 3 * 
+[41]: 4 * 
+[42]: 4 * 
+[43]: 5 * 
+[44]: 6 * 
+[45]: 7 * 
+[46]: 7 * 
+[47]: 7 * 
+[48]: 7 * 
+[49]: 7 * 
+[50]: 6 * 
+[51]: 5 * 
+[52]: 4 * 
+[453] q_index that maximizes c+g:45
+[472] Adding X[45]: T, Y[36]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 38, 44, 32, 35, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 33
+Calling space_efficient_lcs_length(String_1, String_2, 38, 44, 32, 33, Q):
+
+---> Q: 
+[38]: 0 * 
+[39]: 0 * 
+[40]: 0 * 
+[41]: 0 * 
+[42]: 1 * 
+[43]: 2 * 
+[44]: 2 * 
+[45]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 38, 44, 34, 35, Q):
+
+---> Q: 
+[38]: 2 * 
+[39]: 2 * 
+[40]: 2 * 
+[41]: 2 * 
+[42]: 3 * 
+[43]: 4 * 
+[44]: 3 * 
+[45]: 2 * 
+[453] q_index that maximizes c+g:43
+[472] Adding X[43]: G, Y[34]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 38, 42, 32, 33, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[42]: G, Y[33]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 43, 44, 34, 35, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[44]: G, Y[35]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 45, 51, 36, 39, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 37
+Calling space_efficient_lcs_length(String_1, String_2, 45, 51, 36, 37, Q):
+
+---> Q: 
+[45]: 0 * 
+[46]: 0 * 
+[47]: 0 * 
+[48]: 1 * 
+[49]: 1 * 
+[50]: 1 * 
+[51]: 1 * 
+[52]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 45, 51, 38, 39, Q):
+
+---> Q: 
+[45]: 2 * 
+[46]: 2 * 
+[47]: 2 * 
+[48]: 3 * 
+[49]: 3 * 
+[50]: 3 * 
+[51]: 2 * 
+[52]: 2 * 
+[453] q_index that maximizes c+g:48
+[472] Adding X[48]: T, Y[38]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 45, 47, 36, 37, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 48, 51, 38, 39, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[50]: C, Y[39]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 52, 66, 40, 47, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 43
+Calling space_efficient_lcs_length(String_1, String_2, 52, 66, 40, 43, Q):
+
+---> Q: 
+[52]: 0 * 
+[53]: 0 * 
+[54]: 1 * 
+[55]: 2 * 
+[56]: 3 * 
+[57]: 4 * 
+[58]: 4 * 
+[59]: 4 * 
+[60]: 4 * 
+[61]: 4 * 
+[62]: 4 * 
+[63]: 4 * 
+[64]: 4 * 
+[65]: 4 * 
+[66]: 4 * 
+[67]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 52, 66, 44, 47, Q):
+
+---> Q: 
+[52]: 4 * 
+[53]: 4 * 
+[54]: 5 * 
+[55]: 6 * 
+[56]: 7 * 
+[57]: 8 * 
+[58]: 8 * 
+[59]: 7 * 
+[60]: 7 * 
+[61]: 7 * 
+[62]: 7 * 
+[63]: 6 * 
+[64]: 6 * 
+[65]: 6 * 
+[66]: 5 * 
+[67]: 4 * 
+[453] q_index that maximizes c+g:57
+[472] Adding X[57]: G, Y[44]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 52, 56, 40, 43, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 41
+Calling space_efficient_lcs_length(String_1, String_2, 52, 56, 40, 41, Q):
+
+---> Q: 
+[52]: 0 * 
+[53]: 0 * 
+[54]: 1 * 
+[55]: 2 * 
+[56]: 2 * 
+[57]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 52, 56, 42, 43, Q):
+
+---> Q: 
+[52]: 2 * 
+[53]: 2 * 
+[54]: 3 * 
+[55]: 4 * 
+[56]: 3 * 
+[57]: 2 * 
+[453] q_index that maximizes c+g:55
+[472] Adding X[55]: C, Y[42]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 52, 54, 40, 41, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[329] Adding X[54]: G, Y[41]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 55, 56, 42, 43, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[56]: C, Y[43]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 57, 66, 44, 47, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 45
+Calling space_efficient_lcs_length(String_1, String_2, 57, 66, 44, 45, Q):
+
+---> Q: 
+[57]: 0 * 
+[58]: 1 * 
+[59]: 1 * 
+[60]: 1 * 
+[61]: 2 * 
+[62]: 2 * 
+[63]: 2 * 
+[64]: 2 * 
+[65]: 2 * 
+[66]: 2 * 
+[67]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 57, 66, 46, 47, Q):
+
+---> Q: 
+[57]: 2 * 
+[58]: 3 * 
+[59]: 3 * 
+[60]: 3 * 
+[61]: 4 * 
+[62]: 4 * 
+[63]: 4 * 
+[64]: 4 * 
+[65]: 4 * 
+[66]: 3 * 
+[67]: 2 * 
+[453] q_index that maximizes c+g:61
+[472] Adding X[61]: C, Y[46]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 57, 60, 44, 45, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[58]: A, Y[45]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 61, 66, 46, 47, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[66]: C, Y[47]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 67, 80, 48, 63, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 55
+Calling space_efficient_lcs_length(String_1, String_2, 67, 80, 48, 55, Q):
+
+---> Q: 
+[67]: 0 * 
+[68]: 1 * 
+[69]: 2 * 
+[70]: 3 * 
+[71]: 4 * 
+[72]: 4 * 
+[73]: 5 * 
+[74]: 6 * 
+[75]: 6 * 
+[76]: 6 * 
+[77]: 6 * 
+[78]: 6 * 
+[79]: 6 * 
+[80]: 7 * 
+[81]: 7 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 67, 80, 56, 63, Q):
+
+---> Q: 
+[67]: 6 * 
+[68]: 6 * 
+[69]: 6 * 
+[70]: 7 * 
+[71]: 8 * 
+[72]: 8 * 
+[73]: 9 * 
+[74]: 10 * 
+[75]: 9 * 
+[76]: 9 * 
+[77]: 9 * 
+[78]: 9 * 
+[79]: 8 * 
+[80]: 8 * 
+[81]: 7 * 
+[453] q_index that maximizes c+g:74
+[472] Adding X[74]: G, Y[56]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 67, 73, 48, 55, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 51
+Calling space_efficient_lcs_length(String_1, String_2, 67, 73, 48, 51, Q):
+
+---> Q: 
+[67]: 0 * 
+[68]: 1 * 
+[69]: 2 * 
+[70]: 2 * 
+[71]: 3 * 
+[72]: 3 * 
+[73]: 3 * 
+[74]: 3 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 67, 73, 52, 55, Q):
+
+---> Q: 
+[67]: 3 * 
+[68]: 4 * 
+[69]: 5 * 
+[70]: 5 * 
+[71]: 6 * 
+[72]: 5 * 
+[73]: 4 * 
+[74]: 3 * 
+[453] q_index that maximizes c+g:71
+[472] Adding X[71]: G, Y[52]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 67, 70, 48, 51, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 49
+Calling space_efficient_lcs_length(String_1, String_2, 67, 70, 48, 49, Q):
+
+---> Q: 
+[67]: 0 * 
+[68]: 1 * 
+[69]: 1 * 
+[70]: 1 * 
+[71]: 1 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 67, 70, 50, 51, Q):
+
+---> Q: 
+[67]: 2 * 
+[68]: 3 * 
+[69]: 2 * 
+[70]: 2 * 
+[71]: 1 * 
+[453] q_index that maximizes c+g:68
+[472] Adding X[68]: T, Y[50]: T
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 67, 67, 48, 49, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[271] Base Case: One string of size = 0
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 68, 70, 50, 51, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[69]: C, Y[51]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 71, 73, 52, 55, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[72]: A, Y[53]: A
+[329] Adding X[73]: A, Y[55]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 74, 80, 56, 63, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 59
+Calling space_efficient_lcs_length(String_1, String_2, 74, 80, 56, 59, Q):
+
+---> Q: 
+[74]: 0 * 
+[75]: 1 * 
+[76]: 1 * 
+[77]: 1 * 
+[78]: 1 * 
+[79]: 2 * 
+[80]: 3 * 
+[81]: 3 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 74, 80, 60, 63, Q):
+
+---> Q: 
+[74]: 3 * 
+[75]: 4 * 
+[76]: 4 * 
+[77]: 4 * 
+[78]: 4 * 
+[79]: 4 * 
+[80]: 4 * 
+[81]: 3 * 
+[453] q_index that maximizes c+g:75
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 74, 74, 56, 59, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[75]: T, Y[57]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 75, 80, 60, 63, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 61
+Calling space_efficient_lcs_length(String_1, String_2, 75, 80, 60, 61, Q):
+
+---> Q: 
+[75]: 0 * 
+[76]: 0 * 
+[77]: 0 * 
+[78]: 0 * 
+[79]: 1 * 
+[80]: 2 * 
+[81]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 75, 80, 62, 63, Q):
+
+---> Q: 
+[75]: 2 * 
+[76]: 2 * 
+[77]: 2 * 
+[78]: 2 * 
+[79]: 3 * 
+[80]: 3 * 
+[81]: 2 * 
+[453] q_index that maximizes c+g:79
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 75, 78, 60, 61, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[358] Base Case: String_2 size = 2
+[371] Adding X[79]: T, Y[61]: T
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 79, 80, 62, 63, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[80]: G, Y[63]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 81, 127, 64, 127, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 95
+Calling space_efficient_lcs_length(String_1, String_2, 81, 127, 64, 95, Q):
+
+---> Q: 
+[81]: 0 * 
+[82]: 1 * 
+[83]: 2 * 
+[84]: 3 * 
+[85]: 4 * 
+[86]: 5 * 
+[87]: 6 * 
+[88]: 7 * 
+[89]: 8 * 
+[90]: 9 * 
+[91]: 10 * 
+[92]: 10 * 
+[93]: 11 * 
+[94]: 12 * 
+[95]: 12 * 
+[96]: 13 * 
+[97]: 14 * 
+[98]: 14 * 
+[99]: 14 * 
+[100]: 15 * 
+[101]: 16 * 
+[102]: 17 * 
+[103]: 18 * 
+[104]: 18 * 
+[105]: 18 * 
+[106]: 19 * 
+[107]: 20 * 
+[108]: 20 * 
+[109]: 21 * 
+[110]: 22 * 
+[111]: 22 * 
+[112]: 22 * 
+[113]: 22 * 
+[114]: 22 * 
+[115]: 22 * 
+[116]: 22 * 
+[117]: 22 * 
+[118]: 22 * 
+[119]: 22 * 
+[120]: 22 * 
+[121]: 22 * 
+[122]: 22 * 
+[123]: 23 * 
+[124]: 24 * 
+[125]: 24 * 
+[126]: 24 * 
+[127]: 24 * 
+[128]: 24 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 81, 127, 96, 127, Q):
+
+---> Q: 
+[81]: 20 * 
+[82]: 20 * 
+[83]: 21 * 
+[84]: 22 * 
+[85]: 23 * 
+[86]: 24 * 
+[87]: 25 * 
+[88]: 25 * 
+[89]: 26 * 
+[90]: 27 * 
+[91]: 28 * 
+[92]: 28 * 
+[93]: 28 * 
+[94]: 29 * 
+[95]: 29 * 
+[96]: 30 * 
+[97]: 31 * 
+[98]: 31 * 
+[99]: 30 * 
+[100]: 31 * 
+[101]: 31 * 
+[102]: 32 * 
+[103]: 32 * 
+[104]: 32 * 
+[105]: 31 * 
+[106]: 32 * 
+[107]: 33 * 
+[108]: 33 * 
+[109]: 34 * 
+[110]: 35 * 
+[111]: 35 * 
+[112]: 35 * 
+[113]: 35 * 
+[114]: 34 * 
+[115]: 34 * 
+[116]: 34 * 
+[117]: 33 * 
+[118]: 32 * 
+[119]: 31 * 
+[120]: 30 * 
+[121]: 29 * 
+[122]: 28 * 
+[123]: 28 * 
+[124]: 28 * 
+[125]: 27 * 
+[126]: 26 * 
+[127]: 25 * 
+[128]: 24 * 
+[453] q_index that maximizes c+g:110
+[472] Adding X[110]: C, Y[96]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 81, 109, 64, 95, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 79
+Calling space_efficient_lcs_length(String_1, String_2, 81, 109, 64, 79, Q):
+
+---> Q: 
+[81]: 0 * 
+[82]: 1 * 
+[83]: 2 * 
+[84]: 3 * 
+[85]: 4 * 
+[86]: 5 * 
+[87]: 6 * 
+[88]: 6 * 
+[89]: 7 * 
+[90]: 8 * 
+[91]: 9 * 
+[92]: 9 * 
+[93]: 10 * 
+[94]: 10 * 
+[95]: 10 * 
+[96]: 11 * 
+[97]: 11 * 
+[98]: 11 * 
+[99]: 11 * 
+[100]: 12 * 
+[101]: 12 * 
+[102]: 12 * 
+[103]: 12 * 
+[104]: 12 * 
+[105]: 12 * 
+[106]: 12 * 
+[107]: 12 * 
+[108]: 12 * 
+[109]: 12 * 
+[110]: 12 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 81, 109, 80, 95, Q):
+
+---> Q: 
+[81]: 12 * 
+[82]: 13 * 
+[83]: 14 * 
+[84]: 15 * 
+[85]: 16 * 
+[86]: 17 * 
+[87]: 18 * 
+[88]: 18 * 
+[89]: 19 * 
+[90]: 20 * 
+[91]: 21 * 
+[92]: 21 * 
+[93]: 21 * 
+[94]: 21 * 
+[95]: 21 * 
+[96]: 22 * 
+[97]: 22 * 
+[98]: 22 * 
+[99]: 21 * 
+[100]: 21 * 
+[101]: 20 * 
+[102]: 19 * 
+[103]: 19 * 
+[104]: 18 * 
+[105]: 17 * 
+[106]: 16 * 
+[107]: 15 * 
+[108]: 14 * 
+[109]: 13 * 
+[110]: 12 * 
+[453] q_index that maximizes c+g:96
+[472] Adding X[96]: C, Y[80]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 81, 95, 64, 79, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 71
+Calling space_efficient_lcs_length(String_1, String_2, 81, 95, 64, 71, Q):
+
+---> Q: 
+[81]: 0 * 
+[82]: 1 * 
+[83]: 2 * 
+[84]: 3 * 
+[85]: 4 * 
+[86]: 4 * 
+[87]: 4 * 
+[88]: 5 * 
+[89]: 5 * 
+[90]: 5 * 
+[91]: 5 * 
+[92]: 5 * 
+[93]: 6 * 
+[94]: 6 * 
+[95]: 6 * 
+[96]: 6 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 81, 95, 72, 79, Q):
+
+---> Q: 
+[81]: 7 * 
+[82]: 8 * 
+[83]: 9 * 
+[84]: 10 * 
+[85]: 11 * 
+[86]: 11 * 
+[87]: 10 * 
+[88]: 10 * 
+[89]: 9 * 
+[90]: 8 * 
+[91]: 8 * 
+[92]: 8 * 
+[93]: 8 * 
+[94]: 7 * 
+[95]: 7 * 
+[96]: 6 * 
+[453] q_index that maximizes c+g:85
+[472] Adding X[85]: A, Y[72]: A
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 81, 84, 64, 71, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 67
+Calling space_efficient_lcs_length(String_1, String_2, 81, 84, 64, 67, Q):
+
+---> Q: 
+[81]: 0 * 
+[82]: 1 * 
+[83]: 2 * 
+[84]: 2 * 
+[85]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 81, 84, 68, 71, Q):
+
+---> Q: 
+[81]: 3 * 
+[82]: 3 * 
+[83]: 4 * 
+[84]: 3 * 
+[85]: 2 * 
+[453] q_index that maximizes c+g:83
+[472] Adding X[83]: G, Y[68]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 81, 82, 64, 67, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[82]: A, Y[67]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 83, 84, 68, 71, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[84]: A, Y[69]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 85, 95, 72, 79, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 75
+Calling space_efficient_lcs_length(String_1, String_2, 85, 95, 72, 75, Q):
+
+---> Q: 
+[85]: 0 * 
+[86]: 1 * 
+[87]: 1 * 
+[88]: 2 * 
+[89]: 3 * 
+[90]: 4 * 
+[91]: 4 * 
+[92]: 4 * 
+[93]: 4 * 
+[94]: 4 * 
+[95]: 4 * 
+[96]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 85, 95, 76, 79, Q):
+
+---> Q: 
+[85]: 3 * 
+[86]: 4 * 
+[87]: 4 * 
+[88]: 5 * 
+[89]: 6 * 
+[90]: 7 * 
+[91]: 6 * 
+[92]: 6 * 
+[93]: 6 * 
+[94]: 5 * 
+[95]: 5 * 
+[96]: 4 * 
+[453] q_index that maximizes c+g:90
+[472] Adding X[90]: G, Y[76]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 85, 89, 72, 75, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 73
+Calling space_efficient_lcs_length(String_1, String_2, 85, 89, 72, 73, Q):
+
+---> Q: 
+[85]: 0 * 
+[86]: 1 * 
+[87]: 1 * 
+[88]: 2 * 
+[89]: 2 * 
+[90]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 85, 89, 74, 75, Q):
+
+---> Q: 
+[85]: 2 * 
+[86]: 3 * 
+[87]: 3 * 
+[88]: 4 * 
+[89]: 3 * 
+[90]: 2 * 
+[453] q_index that maximizes c+g:88
+[472] Adding X[88]: A, Y[74]: A
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 85, 87, 72, 73, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[86]: C, Y[73]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 88, 89, 74, 75, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[89]: G, Y[75]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 90, 95, 76, 79, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 77
+Calling space_efficient_lcs_length(String_1, String_2, 90, 95, 76, 77, Q):
+
+---> Q: 
+[90]: 0 * 
+[91]: 1 * 
+[92]: 1 * 
+[93]: 2 * 
+[94]: 2 * 
+[95]: 2 * 
+[96]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 90, 95, 78, 79, Q):
+
+---> Q: 
+[90]: 2 * 
+[91]: 3 * 
+[92]: 3 * 
+[93]: 3 * 
+[94]: 3 * 
+[95]: 3 * 
+[96]: 2 * 
+[453] q_index that maximizes c+g:91
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 90, 90, 76, 77, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[91]: G, Y[77]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 91, 95, 78, 79, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[93]: A, Y[79]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 96, 109, 80, 95, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 87
+Calling space_efficient_lcs_length(String_1, String_2, 96, 109, 80, 87, Q):
+
+---> Q: 
+[96]: 0 * 
+[97]: 1 * 
+[98]: 2 * 
+[99]: 3 * 
+[100]: 4 * 
+[101]: 4 * 
+[102]: 5 * 
+[103]: 5 * 
+[104]: 5 * 
+[105]: 6 * 
+[106]: 7 * 
+[107]: 7 * 
+[108]: 7 * 
+[109]: 7 * 
+[110]: 7 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 96, 109, 88, 95, Q):
+
+---> Q: 
+[96]: 6 * 
+[97]: 7 * 
+[98]: 8 * 
+[99]: 9 * 
+[100]: 10 * 
+[101]: 10 * 
+[102]: 11 * 
+[103]: 11 * 
+[104]: 10 * 
+[105]: 11 * 
+[106]: 11 * 
+[107]: 10 * 
+[108]: 9 * 
+[109]: 8 * 
+[110]: 7 * 
+[453] q_index that maximizes c+g:102
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 96, 101, 80, 87, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 83
+Calling space_efficient_lcs_length(String_1, String_2, 96, 101, 80, 83, Q):
+
+---> Q: 
+[96]: 0 * 
+[97]: 1 * 
+[98]: 2 * 
+[99]: 2 * 
+[100]: 3 * 
+[101]: 3 * 
+[102]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 96, 101, 84, 87, Q):
+
+---> Q: 
+[96]: 2 * 
+[97]: 3 * 
+[98]: 4 * 
+[99]: 4 * 
+[100]: 5 * 
+[101]: 4 * 
+[102]: 4 * 
+[453] q_index that maximizes c+g:100
+[472] Adding X[100]: C, Y[84]: C
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 96, 99, 80, 83, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 81
+Calling space_efficient_lcs_length(String_1, String_2, 96, 99, 80, 81, Q):
+
+---> Q: 
+[96]: 0 * 
+[97]: 1 * 
+[98]: 1 * 
+[99]: 1 * 
+[100]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 96, 99, 82, 83, Q):
+
+---> Q: 
+[96]: 2 * 
+[97]: 3 * 
+[98]: 3 * 
+[99]: 2 * 
+[100]: 2 * 
+[453] q_index that maximizes c+g:97
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 96, 96, 80, 81, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[97]: A, Y[81]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 97, 99, 82, 83, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[98]: A, Y[83]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 100, 101, 84, 87, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[101]: A, Y[86]: A
+[329] Adding X[102]: C, Y[87]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 102, 109, 88, 95, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 91
+Calling space_efficient_lcs_length(String_1, String_2, 102, 109, 88, 91, Q):
+
+---> Q: 
+[102]: 0 * 
+[103]: 1 * 
+[104]: 1 * 
+[105]: 2 * 
+[106]: 2 * 
+[107]: 2 * 
+[108]: 2 * 
+[109]: 2 * 
+[110]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 102, 109, 92, 95, Q):
+
+---> Q: 
+[102]: 4 * 
+[103]: 5 * 
+[104]: 5 * 
+[105]: 6 * 
+[106]: 6 * 
+[107]: 5 * 
+[108]: 4 * 
+[109]: 3 * 
+[110]: 2 * 
+[453] q_index that maximizes c+g:105
+[472] Adding X[105]: A, Y[92]: A
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 102, 104, 88, 91, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[103]: G, Y[90]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 105, 109, 92, 95, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 93
+Calling space_efficient_lcs_length(String_1, String_2, 105, 109, 92, 93, Q):
+
+---> Q: 
+[105]: 0 * 
+[106]: 1 * 
+[107]: 1 * 
+[108]: 2 * 
+[109]: 2 * 
+[110]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 105, 109, 94, 95, Q):
+
+---> Q: 
+[105]: 2 * 
+[106]: 3 * 
+[107]: 3 * 
+[108]: 4 * 
+[109]: 3 * 
+[110]: 2 * 
+[453] q_index that maximizes c+g:108
+[472] Adding X[108]: G, Y[94]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 105, 107, 92, 93, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[106]: C, Y[93]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 108, 109, 94, 95, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[109]: C, Y[95]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 110, 127, 96, 127, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 111
+Calling space_efficient_lcs_length(String_1, String_2, 110, 127, 96, 111, Q):
+
+---> Q: 
+[110]: 0 * 
+[111]: 1 * 
+[112]: 2 * 
+[113]: 3 * 
+[114]: 3 * 
+[115]: 4 * 
+[116]: 5 * 
+[117]: 5 * 
+[118]: 5 * 
+[119]: 5 * 
+[120]: 5 * 
+[121]: 6 * 
+[122]: 7 * 
+[123]: 8 * 
+[124]: 8 * 
+[125]: 8 * 
+[126]: 9 * 
+[127]: 9 * 
+[128]: 9 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 110, 127, 112, 127, Q):
+
+---> Q: 
+[110]: 8 * 
+[111]: 9 * 
+[112]: 10 * 
+[113]: 10 * 
+[114]: 10 * 
+[115]: 11 * 
+[116]: 12 * 
+[117]: 12 * 
+[118]: 12 * 
+[119]: 11 * 
+[120]: 11 * 
+[121]: 12 * 
+[122]: 13 * 
+[123]: 13 * 
+[124]: 12 * 
+[125]: 11 * 
+[126]: 11 * 
+[127]: 10 * 
+[128]: 9 * 
+[453] q_index that maximizes c+g:122
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 110, 121, 96, 111, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 103
+Calling space_efficient_lcs_length(String_1, String_2, 110, 121, 96, 103, Q):
+
+---> Q: 
+[110]: 0 * 
+[111]: 1 * 
+[112]: 2 * 
+[113]: 3 * 
+[114]: 3 * 
+[115]: 4 * 
+[116]: 4 * 
+[117]: 4 * 
+[118]: 5 * 
+[119]: 5 * 
+[120]: 5 * 
+[121]: 6 * 
+[122]: 6 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 110, 121, 104, 111, Q):
+
+---> Q: 
+[110]: 2 * 
+[111]: 3 * 
+[112]: 4 * 
+[113]: 5 * 
+[114]: 5 * 
+[115]: 5 * 
+[116]: 5 * 
+[117]: 5 * 
+[118]: 6 * 
+[119]: 6 * 
+[120]: 6 * 
+[121]: 7 * 
+[122]: 6 * 
+[453] q_index that maximizes c+g:121
+[472] Adding X[121]: G, Y[104]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 110, 120, 96, 103, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 99
+Calling space_efficient_lcs_length(String_1, String_2, 110, 120, 96, 99, Q):
+
+---> Q: 
+[110]: 0 * 
+[111]: 1 * 
+[112]: 1 * 
+[113]: 2 * 
+[114]: 2 * 
+[115]: 2 * 
+[116]: 2 * 
+[117]: 3 * 
+[118]: 3 * 
+[119]: 4 * 
+[120]: 4 * 
+[121]: 4 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 110, 120, 100, 103, Q):
+
+---> Q: 
+[110]: 4 * 
+[111]: 5 * 
+[112]: 5 * 
+[113]: 6 * 
+[114]: 6 * 
+[115]: 5 * 
+[116]: 5 * 
+[117]: 6 * 
+[118]: 5 * 
+[119]: 6 * 
+[120]: 5 * 
+[121]: 4 * 
+[453] q_index that maximizes c+g:113
+[472] Adding X[113]: A, Y[100]: A
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 110, 112, 96, 99, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[111]: G, Y[99]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 113, 120, 100, 103, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 101
+Calling space_efficient_lcs_length(String_1, String_2, 113, 120, 100, 101, Q):
+
+---> Q: 
+[113]: 0 * 
+[114]: 0 * 
+[115]: 1 * 
+[116]: 1 * 
+[117]: 1 * 
+[118]: 2 * 
+[119]: 2 * 
+[120]: 2 * 
+[121]: 2 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 113, 120, 102, 103, Q):
+
+---> Q: 
+[113]: 2 * 
+[114]: 2 * 
+[115]: 3 * 
+[116]: 3 * 
+[117]: 3 * 
+[118]: 4 * 
+[119]: 4 * 
+[120]: 3 * 
+[121]: 2 * 
+[453] q_index that maximizes c+g:118
+[472] Adding X[118]: G, Y[102]: G
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 113, 117, 100, 101, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[338] Base Case: String_2 size = 1
+[349] Adding X[115]: G, Y[101]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 118, 120, 102, 103, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[119]: A, Y[103]: A
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 121, 121, 104, 111, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[122]: G, Y[106]: G
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 122, 127, 112, 127, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 119
+Calling space_efficient_lcs_length(String_1, String_2, 122, 127, 112, 119, Q):
+
+---> Q: 
+[122]: 0 * 
+[123]: 1 * 
+[124]: 2 * 
+[125]: 3 * 
+[126]: 4 * 
+[127]: 4 * 
+[128]: 5 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 122, 127, 120, 127, Q):
+
+---> Q: 
+[122]: 4 * 
+[123]: 5 * 
+[124]: 5 * 
+[125]: 6 * 
+[126]: 6 * 
+[127]: 5 * 
+[128]: 5 * 
+[453] q_index that maximizes c+g:125
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 122, 124, 112, 119, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+Middle Point of String_2: 115
+Calling space_efficient_lcs_length(String_1, String_2, 122, 124, 112, 115, Q):
+
+---> Q: 
+[122]: 0 * 
+[123]: 1 * 
+[124]: 1 * 
+[125]: 1 * 
+
+
+Calling backward_space_efficient_lcs_length(String_1, String_2, 122, 124, 116, 119, Q):
+
+---> Q: 
+[122]: 2 * 
+[123]: 3 * 
+[124]: 2 * 
+[125]: 1 * 
+[453] q_index that maximizes c+g:123
+
+[543] Calling recursively lcs_divide_and_conquer(String_1, String_2, 122, 122, 112, 115, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[279] Base Case: String_1 size = 1
+[290] Adding X[123]: C, Y[113]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 123, 124, 116, 119, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[124]: C, Y[117]: C
+[329] Adding X[125]: C, Y[118]: C
+
+[556] Calling recursively lcs_divide_and_conquer(String_1, String_2, 125, 127, 120, 127, Q, LCS_set, LCS_xset, LCS_yset)
+********************************************************
+[299] Base Case: String_1 size = 2
+[314] Adding X[126]: T, Y[121]: T
+[329] Adding X[127]: G, Y[125]: G
+At Index 0 of X: T
+At Index 1 of X: C
+At Index 2 of X: C
+At Index 3 of X: C
+At Index 6 of X: T
+At Index 7 of X: G
+At Index 9 of X: T
+At Index 11 of X: T
+At Index 12 of X: T
+At Index 14 of X: T
+At Index 15 of X: T
+At Index 17 of X: T
+At Index 18 of X: G
+At Index 19 of X: T
+At Index 20 of X: G
+At Index 21 of X: G
+At Index 23 of X: T
+At Index 25 of X: G
+At Index 27 of X: C
+At Index 31 of X: C
+At Index 33 of X: T
+At Index 35 of X: C
+At Index 37 of X: A
+At Index 41 of X: G
+At Index 42 of X: G
+At Index 43 of X: G
+At Index 44 of X: T
+At Index 47 of X: T
+At Index 49 of X: C
+At Index 51 of X: T
+At Index 53 of X: G
+At Index 54 of X: C
+At Index 55 of X: C
+At Index 56 of X: G
+At Index 57 of X: A
+At Index 60 of X: C
+At Index 65 of X: C
+At Index 66 of X: A
+At Index 67 of X: T
+At Index 68 of X: C
+At Index 70 of X: G
+At Index 71 of X: A
+At Index 72 of X: A
+At Index 73 of X: G
+At Index 74 of X: T
+At Index 78 of X: T
+At Index 79 of X: G
+At Index 80 of X: T
+At Index 81 of X: A
+At Index 82 of X: G
+At Index 83 of X: A
+At Index 84 of X: A
+At Index 85 of X: C
+At Index 87 of X: A
+At Index 88 of X: G
+At Index 89 of X: G
+At Index 90 of X: G
+At Index 92 of X: A
+At Index 95 of X: C
+At Index 96 of X: A
+At Index 97 of X: A
+At Index 99 of X: C
+At Index 100 of X: A
+At Index 101 of X: C
+At Index 102 of X: G
+At Index 104 of X: A
+At Index 105 of X: C
+At Index 107 of X: G
+At Index 108 of X: C
+At Index 109 of X: C
+At Index 110 of X: G
+At Index 112 of X: A
+At Index 114 of X: G
+At Index 117 of X: G
+At Index 118 of X: A
+At Index 120 of X: G
+At Index 121 of X: G
+At Index 122 of X: C
+At Index 123 of X: C
+At Index 124 of X: C
+At Index 125 of X: T
+At Index 126 of X: G
+At Index 127 of X: A
+Length of the LCS: 83
