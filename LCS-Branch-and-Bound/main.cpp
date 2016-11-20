@@ -35,7 +35,7 @@ void Initialize(Node &node){
 
 
 bool IndexHitEnd(Node node){
-    return node.firstIndex==first.size()||node;secondIndex==second.size();
+    return node.firstIndex==first.size()||node.secondIndex==second.size();
 }
 
 bool UpperBoundReach(){
@@ -250,5 +250,4 @@ int main()
     }while(answer!='Y' && answer!='y');
     return 0;
 }
-
 
