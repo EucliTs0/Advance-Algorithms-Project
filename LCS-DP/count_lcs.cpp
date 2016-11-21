@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int lcs(string X, string Y)
+int count_lcs(string X, string Y)
 {
    int m = X.length();
    int n = Y.length();
