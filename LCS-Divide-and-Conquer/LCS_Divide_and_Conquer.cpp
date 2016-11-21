@@ -249,27 +249,9 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
 
     // auto search = LCS_xset->find(string_1_end + 1);
     // if(search != )
-    long s_string_1_end = string_1_end;
-    long s_string_2_end = string_2_end;
-
-    if(String_1->at(string_1_end) == String_2->at(string_2_end)) {
-        /** Add to the LCS and search over string_1_end - 1, string_2_end - 1 */
-
-        LCS_set->insert(std::make_pair(string_1_end + 1, string_2_end + 1));
-        LCS_xset->insert(string_1_end + 1);
-        LCS_yset->insert(string_2_end + 1);
-
-        s_string_1_end = string_1_end - 1;
-        s_string_2_end = string_2_end - 1;
-
-        if(DEBUG_LCS_D_C){
-            std::cout << "[" << __LINE__ << "] Special Case: String_1[string_1_end] = String_2[string_2_end]" << std::endl;
-            std::cout << "[" << __LINE__ << "] Adding X[" << string_1_end + 1 << "]: " << String_1->at(string_1_end) << ", Y[" << string_2_end + 1 << "]: " << String_2->at(string_2_end) << std::endl;
-        }
-    }
     /** Base cases when one of the two string lengths are less than or equal to 2 */
-    long length_1 = s_string_1_end - string_1_begin + 1;
-    long length_2 = s_string_2_end - string_2_begin + 1;
+    long length_1 = string_1_end - string_1_begin + 1;
+    long length_2 = string_2_end - string_2_begin + 1;
 
     /** For strings of length 0 do nothing */
     if(length_1 <= 0 || length_2 <= 0){
@@ -279,120 +261,151 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
         return;
     }
 
-    if(length_1 == 1) {
-        /** Find if  there is an occurrence of the character of String_1 in String_2 */
-        if(DEBUG_LCS_D_C){
-            std::cout << "[" << __LINE__ << "] Base Case: String_1 size = 1" << std::endl;
-        }
-        for(long ii = string_2_begin; ii <= s_string_2_end; ii++){
-            if(String_1->at(string_1_begin) == String_2->at(ii)){
-                //**
-                // LCS_set->insert(string_1_begin);
-                LCS_set->insert(std::make_pair(string_1_begin + 1, ii + 1));
-                LCS_xset->insert(string_1_begin + 1);
-                LCS_yset->insert(ii + 1);
+    /** The test is to test if are equals and were added to the LSC_Xset */
+    if(length_1 <= 2 || length_2 <= 2){
+        if(String_1->at(string_1_end) == String_2->at(string_2_end)) {
+            /** Add to the LCS and search over string_1_end - 1, string_2_end - 1 */
 
-                if(DEBUG_LCS_D_C){
-                    std::cout << "[" << __LINE__ << "] Adding X[" << string_1_begin + 1 << "]: " << String_1->at(string_1_begin) << ", Y[" << ii + 1 << "]: " << String_2->at(ii) << std::endl;
-                }
-                break;
+            LCS_set->insert(std::make_pair(string_1_end + 1, string_2_end + 1));
+            LCS_xset->insert(string_1_end + 1);
+            LCS_yset->insert(string_2_end + 1);
+
+            if(DEBUG_LCS_D_C){
+                std::cout << "[" << __LINE__ << "] Special Case: String_1[string_1_end] = String_2[string_2_end]" << std::endl;
+                std::cout << "[" << __LINE__ << "] Adding X[" << string_1_end + 1 << "]: " << String_1->at(string_1_end) << ", Y[" << string_2_end + 1 << "]: " << String_2->at(string_2_end) << std::endl;
             }
-        }
-        return;
-    }
-    if(length_1 == 2) {
-        if(DEBUG_LCS_D_C){
-            std::cout << "[" << __LINE__ << "] Base Case: String_1 size = 2" << std::endl;
+            string_1_end = string_1_end - 1;
+            string_2_end = string_2_end - 1;
+            length_1 = length_1 - 1;
+            length_2 = length_2 - 1;
+
+
         }
 
-        /** Test the first character in String_1 */
-        long jj = string_2_begin;
-        for(long ii = string_2_begin; ii <= s_string_2_end; ii++){
-            if(String_1->at(string_1_begin) == String_2->at(ii)) {
-                // ++
-                // LCS_set->insert(string_1_begin);
-                LCS_set->insert(std::make_pair(string_1_begin + 1, ii + 1));
-                LCS_xset->insert(string_1_begin + 1);
-                LCS_yset->insert(ii + 1);
-                jj = ii + 1;
+        if(length_1 <= 0 || length_2 <= 0){
+            if(DEBUG_LCS_D_C){
+                std::cout << "[" << __LINE__ << "] Base Case: One string of size = 0" << std::endl;
+            }
+            return;
+        }
+        if(length_1 == 1) {
+            /** Find if  there is an occurrence of the character of String_1 in String_2 */
+            if(DEBUG_LCS_D_C){
+                std::cout << "[" << __LINE__ << "] Base Case: String_1 size = 1" << std::endl;
+            }
+            for(long ii = string_2_begin; ii <= string_2_end; ii++){
+                if(String_1->at(string_1_begin) == String_2->at(ii)){
+                    //**
+                    // LCS_set->insert(string_1_begin);
+                    LCS_set->insert(std::make_pair(string_1_begin + 1, ii + 1));
+                    LCS_xset->insert(string_1_begin + 1);
+                    LCS_yset->insert(ii + 1);
 
-                if(DEBUG_LCS_D_C){
-                    std::cout << "[" << __LINE__ << "] Adding X[" << string_1_begin + 1 << "]: " << String_1->at(string_1_begin) << ", Y[" << ii + 1 << "]: " << String_2->at(ii) << std::endl;
+                    if(DEBUG_LCS_D_C){
+                        std::cout << "[" << __LINE__ << "] Adding X[" << string_1_begin + 1 << "]: " << String_1->at(string_1_begin) << ", Y[" << ii + 1 << "]: " << String_2->at(ii) << std::endl;
+                    }
+                    break;
                 }
-                break;
             }
+            return;
         }
-        /** Test the second character in String_1 */
-        for(long ii = jj; ii <= s_string_2_end; ii++){
-            if(String_1->at(string_1_begin + 1) == String_2->at(ii)) {
-                // ++
-                // LCS_set->insert(string_1_begin + 1);
-                LCS_set->insert(std::make_pair(string_1_begin + 2, ii + 1));
-                LCS_xset->insert(string_1_begin + 2);
-                LCS_yset->insert(ii + 1);
 
-                if(DEBUG_LCS_D_C){
-                    std::cout << "[" << __LINE__ << "] Adding X[" << string_1_begin + 2 << "]: " << String_1->at(string_1_begin + 1) << ", Y[" << ii + 1 << "]: " << String_2->at(ii) << std::endl;
-                }
-                break;
+        if(length_1 == 2) {
+            if(DEBUG_LCS_D_C){
+                std::cout << "[" << __LINE__ << "] Base Case: String_1 size = 2" << std::endl;
             }
-        }
-        return;
-    }
-    if(length_2 == 1){
-        if(DEBUG_LCS_D_C){
-            std::cout << "[" << __LINE__ << "] Base Case: String_2 size = 1" << std::endl;
-        }
-        for(long jj = string_1_begin; jj <= s_string_1_end; jj++){
-            if(String_2->at(string_2_begin) == String_1->at(jj)) {
-                // ++
-                // LCS_set->insert(jj);
-                LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 1));
-                LCS_xset->insert(jj + 1);
-                LCS_yset->insert(string_2_begin + 1);
 
-                if(DEBUG_LCS_D_C){
-                    std::cout << "[" << __LINE__ << "] Adding X[" << jj + 1 << "]: " << String_1->at(jj) << ", Y[" << string_2_begin + 1 << "]: " << String_2->at(string_2_begin) << std::endl;
-                }
-                break;
-            }
-        }
-        return;
-    }
-    if(length_2 == 2){
-        if(DEBUG_LCS_D_C){
-            std::cout << "[" << __LINE__ << "] Base Case: String_2 size = 2" << std::endl;
-        }
-        long ii = string_2_begin;
-        for(long jj = string_1_begin; jj <= s_string_1_end; jj++){
-            if(String_2->at(string_2_begin) == String_1->at(jj)) {
-                // ++
-                // LCS_set->insert(jj);
-                LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 1));
-                LCS_xset->insert(jj + 1);
-                LCS_yset->insert(string_2_begin + 1);
-                ii = jj + 1;
+            /** Test the first character in String_1 */
+            long jj = string_2_begin;
+            long ii = string_2_begin;
+            for(ii = string_2_begin; ii <= string_2_end; ii++){
+                if(String_1->at(string_1_begin) == String_2->at(ii)) {
+                    // ++
+                    // LCS_set->insert(string_1_begin);
+                    LCS_set->insert(std::make_pair(string_1_begin + 1, ii + 1));
+                    LCS_xset->insert(string_1_begin + 1);
+                    LCS_yset->insert(ii + 1);
+                    jj = ii + 1;
 
-                if(DEBUG_LCS_D_C){
-                    std::cout << "[" << __LINE__ << "] Adding X[" << jj + 1 << "]: " << String_1->at(jj) << ", Y[" << string_2_begin + 1 << "]: " << String_2->at(string_2_begin) << std::endl;
+                    if(DEBUG_LCS_D_C){
+                        std::cout << "[" << __LINE__ << "] Adding X[" << string_1_begin + 1 << "]: " << String_1->at(string_1_begin) << ", Y[" << ii + 1 << "]: " << String_2->at(ii) << std::endl;
+                    }
+                    break;
                 }
-                break;
             }
-        }
-        for(long jj = ii; jj <= s_string_1_end; jj++) {
-            if(String_2->at(string_2_begin + 1) == String_1->at(jj)) {
-                // ++
-                // LCS_set->insert(jj);
-                LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 2));
-                LCS_xset->insert(jj + 1);
-                LCS_yset->insert(string_2_begin + 2);
-                if(DEBUG_LCS_D_C){
-                    std::cout << "[" << __LINE__ << "] Adding X[" << jj + 1 << "]: " << String_1->at(jj) << ", Y[" << string_2_begin + 2 << "]: " << String_2->at(string_2_begin + 1) << std::endl;
+            /** Test the second character in String_1 */
+            for(long ii = jj; ii <= string_2_end; ii++){
+                if(String_1->at(string_1_begin + 1) == String_2->at(ii)) {
+                    // ++
+                    // LCS_set->insert(string_1_begin + 1);
+                    LCS_set->insert(std::make_pair(string_1_begin + 2, ii + 1));
+                    LCS_xset->insert(string_1_begin + 2);
+                    LCS_yset->insert(ii + 1);
+
+                    if(DEBUG_LCS_D_C){
+                        std::cout << "[" << __LINE__ << "] Adding X[" << string_1_begin + 2 << "]: " << String_1->at(string_1_begin + 1) << ", Y[" << ii + 1 << "]: " << String_2->at(ii) << std::endl;
+                    }
+                    break;
                 }
-                break;
             }
+            return;
         }
-        return;
+        if(length_2 == 1){
+            if(DEBUG_LCS_D_C){
+                std::cout << "[" << __LINE__ << "] Base Case: String_2 size = 1" << std::endl;
+            }
+            for(long jj = string_1_begin; jj <= string_1_end; jj++){
+                if(String_2->at(string_2_begin) == String_1->at(jj)) {
+                    // ++
+                    // LCS_set->insert(jj);
+                    LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 1));
+                    LCS_xset->insert(jj + 1);
+                    LCS_yset->insert(string_2_begin + 1);
+
+                    if(DEBUG_LCS_D_C){
+                        std::cout << "[" << __LINE__ << "] Adding X[" << jj + 1 << "]: " << String_1->at(jj) << ", Y[" << string_2_begin + 1 << "]: " << String_2->at(string_2_begin) << std::endl;
+                    }
+                    break;
+                }
+            }
+            return;
+        }
+        if(length_2 == 2){
+            if(DEBUG_LCS_D_C){
+                std::cout << "[" << __LINE__ << "] Base Case: String_2 size = 2" << std::endl;
+            }
+            long ii = string_1_begin;
+            long jj = string_1_begin;
+            for(jj = string_1_begin; jj <= string_1_end; jj++){
+                if(String_2->at(string_2_begin) == String_1->at(jj)) {
+                    // ++
+                    // LCS_set->insert(jj);
+                    LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 1));
+                    LCS_xset->insert(jj + 1);
+                    LCS_yset->insert(string_2_begin + 1);
+                    ii = jj + 1;
+
+                    if(DEBUG_LCS_D_C){
+                        std::cout << "[" << __LINE__ << "] Adding X[" << jj + 1 << "]: " << String_1->at(jj) << ", Y[" << string_2_begin + 1 << "]: " << String_2->at(string_2_begin) << std::endl;
+                    }
+                    break;
+                }
+            }
+            for(long jj = ii; jj <= string_1_end; jj++) {
+                if(String_2->at(string_2_begin + 1) == String_1->at(jj)) {
+                    // ++
+                    // LCS_set->insert(jj);
+                    LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 2));
+                    LCS_xset->insert(jj + 1);
+                    LCS_yset->insert(string_2_begin + 2);
+                    if(DEBUG_LCS_D_C){
+                        std::cout << "[" << __LINE__ << "] Adding X[" << jj + 1 << "]: " << String_1->at(jj) << ", Y[" << string_2_begin + 2 << "]: " << String_2->at(string_2_begin + 1) << std::endl;
+                    }
+                    break;
+                }
+            }
+            return;
+        }
     }
 
     /** Remember that we use 0-based strings */
@@ -495,22 +508,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                                LCS_yset
                                );
 
-        /**
-        if(DEBUG_LCS_D_C){
-            std::cout << "\n[" << __LINE__ << "] Calling recursively lcs_divide_and_conquer(String_1, String_2, "
-                      << q_index_x << ", " << string_1_end << ", " << string_2_middle + 1 << ", " << string_2_end
-                      << ", Q, LCS_set, LCS_xset, LCS_yset)" << std::endl;
-        }
-        lcs_divide_and_conquer(String_1, String_2,
-                               q_index_x, string_1_end,
-                               string_2_middle + 1, string_2_end,
-                               Q,
-                               LCS_set,
-                               LCS_xset,
-                               LCS_yset
-                               );
-        **/
-
     } else {
         if(q_index == string_1_end + 1) {
             if(DEBUG_LCS_D_C){
@@ -526,22 +523,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                                    LCS_xset,
                                    LCS_yset
                                   );
-            /**
-            if(DEBUG_LCS_D_C){
-                std::cout << "\n[" << __LINE__ << "] Calling recursively lcs_divide_and_conquer(String_1, String_2, "
-                          << string_1_begin << ", " << q_index_x << ", " << string_2_middle + 1 << ", " << string_2_end
-                          << ", Q, LCS_set, LCS_xset, LCS_yset)" << std::endl;
-            }
-            lcs_divide_and_conquer(String_1, String_2,
-                                   string_1_begin, q_index_x,
-                                   string_2_middle + 1, string_2_end,
-                                   Q,
-                                   LCS_set,
-                                   LCS_xset,
-                                   LCS_yset
-                                   );
-            **/
-
         }
         else {
             /** Make the recursive calls */
@@ -573,7 +554,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                                    );
         }
     }
-
     return;
 }
 
@@ -625,8 +605,8 @@ int maint(){
     std::set<long>* LCS_YSet = new std::set<long>();
 
 
-    //std::string* X = new std::string("ABCBDAB");
-    //std::string* Y = new std::string("BDCABA");
+    //std::string* X = new std::string("AA");
+    //std::string* Y = new std::string("AA");
 
     //std::string* X = new std::string("abaaccd");
     //std::string* Y = new std::string("acbbddda");
@@ -671,16 +651,36 @@ int maint(){
     //std::string* Y = new std::string("CCTGCTTTGAGTCCCGGCTAATGTACAGTCCGATCACCCAACACCGGCAAGCGTTGCGGCACTAAGCTGGCACGATATACCGGTCGGGCGCCTGGCAGCACCAACTGTCGATAGGATCAGCGCTGTAT");
 
     // Case 15
-    std::string* X = new std::string("TTGGGATGAGGGTGGTAGAGTAGCGGATTAATCTTTTCGTTTATGGGGTAGGGATTGAGCACTTACTCGAGTGCCCCTGGTTGTGACTCAGCTTCTCAACTGACCTGGTCATAACTCCCGGTACGCCACCGATTTGCTGGGAGCACCCAGCAGATACCGGGCTCGATAACTACGGCGAAAGTGGGCCGGTACACCGGTTTAGATCACAATGGCAACGGGACCTTTCGATGCGCTCGAAACGAGCTGCACCTGATCTCTAATGTGGTTTTGCAAACTCTACCATATCAGTTGTTTAGACTGAGTTTATTTCCACACCTAGCAATCGGCTTGTGTATAAGAGTAGGGTAAGGCTACGAAATTAAGTTGTCAGGCTTGGCAAGCGTGGAACTGATTGATATCAACGCAGCGAGCGATAATTAGACTGCCAATCTGAATGTCTGAAAGAACCCAAGTCCTGCAATCGGTAAAAGCTCTGTCCGGCTTCGTCAAGGCTACGCCCGTAACTCCAAGTC");
-    std::string* Y = new std::string("CACTAATACTTGTGTCAGGCCACCCTGCGGTTGTAGTGAGACAATCCGATCTGTAAAAATTTAATGTCACCTAAATGAGACTGAGAAAGGCAATCCTAGCCTGGTGCAGCTATTCGCTGTCACTGCCAGAGAGTGGCCTTGGGAGTATACCCTAGCGCTTGAGTGACACCCCAATACTCTGCCAGGGGCACTGCAAACCAACGCAATCATTGCCTATTGCTTATGCGTGTACCGGTGGTTTAAATCCAATATAAGAAGAACCGGGGACGACGAACACCCGGTCTGGTCGTGTACCCACAAATATAGGGCTGTCTTGGAGGTCTAAATTAAGCTCCACCATCTTAGCACAAGAATGTTCTTCTAAACCAGTCTGAGTAACTTAAAGCCAATGGGAGTAGTCGCTAGGCTCCGCAAATTCAGTTTTAACATCCAGATAGCGAAACCAGTCTTTACTTTGGCCGGCGAATGACATGGGACGTGCTCCGTCAAATTGCGTGACGCTGTCCTAATGC");
+    //std::string* X = new std::string("TTGGGATGAGGGTGGTAGAGTAGCGGATTAATCTTTTCGTTTATGGGGTAGGGATTGAGCACTTACTCGAGTGCCCCTGGTTGTGACTCAGCTTCTCAACTGACCTGGTCATAACTCCCGGTACGCCACCGATTTGCTGGGAGCACCCAGCAGATACCGGGCTCGATAACTACGGCGAAAGTGGGCCGGTACACCGGTTTAGATCACAATGGCAACGGGACCTTTCGATGCGCTCGAAACGAGCTGCACCTGATCTCTAATGTGGTTTTGCAAACTCTACCATATCAGTTGTTTAGACTGAGTTTATTTCCACACCTAGCAATCGGCTTGTGTATAAGAGTAGGGTAAGGCTACGAAATTAAGTTGTCAGGCTTGGCAAGCGTGGAACTGATTGATATCAACGCAGCGAGCGATAATTAGACTGCCAATCTGAATGTCTGAAAGAACCCAAGTCCTGCAATCGGTAAAAGCTCTGTCCGGCTTCGTCAAGGCTACGCCCGTAACTCCAAGTC");
+    //std::string* Y = new std::string("CACTAATACTTGTGTCAGGCCACCCTGCGGTTGTAGTGAGACAATCCGATCTGTAAAAATTTAATGTCACCTAAATGAGACTGAGAAAGGCAATCCTAGCCTGGTGCAGCTATTCGCTGTCACTGCCAGAGAGTGGCCTTGGGAGTATACCCTAGCGCTTGAGTGACACCCCAATACTCTGCCAGGGGCACTGCAAACCAACGCAATCATTGCCTATTGCTTATGCGTGTACCGGTGGTTTAAATCCAATATAAGAAGAACCGGGGACGACGAACACCCGGTCTGGTCGTGTACCCACAAATATAGGGCTGTCTTGGAGGTCTAAATTAAGCTCCACCATCTTAGCACAAGAATGTTCTTCTAAACCAGTCTGAGTAACTTAAAGCCAATGGGAGTAGTCGCTAGGCTCCGCAAATTCAGTTTTAACATCCAGATAGCGAAACCAGTCTTTACTTTGGCCGGCGAATGACATGGGACGTGCTCCGTCAAATTGCGTGACGCTGTCCTAATGC");
 
     // Case 25
-    //std::string* X = new std::string("TCCCAGTGGTGTTCTTGTGTGGATAGGCGTGCATACGACATGGGTGGTACCTAGCCGAATCAATTCATCAGAAGTAAATGTAGAACCAGGGTAGTCAAACACGGACCGCCGGAAGTAGAAGGCCCTGA");
-    //std::string* Y = new std::string("TCCCTCGTAAAATAATTTTAAGTGGTGCCTCAGGGTCTCTGCCGACCAGTCGATAGTCTGTGGTCGAGACGACAGGGAACACACGACTTGCACGCCATGAGGAGCGTTTTCTCAATCCTATCACGTCA");
+    // std::string* X = new std::string("TCCCAGTGGTGTTCTTGTGTGGATAGGCGTGCATACGACATGGGTGGTACCTAGCCGAATCAATTCATCAGAAGTAAATGTAGAACCAGGGTAGTCAAACACGGACCGCCGGAAGTAGAAGGCCCTGA");
+    // std::string* Y = new std::string("TCCCTCGTAAAATAATTTTAAGTGGTGCCTCAGGGTCTCTGCCGACCAGTCGATAGTCTGTGGTCGAGACGACAGGGAACACACGACTTGCACGCCATGAGGAGCGTTTTCTCAATCCTATCACGTCA");
 
     //
     //std::string* X = new std::string("TCCCAG");
     //std::string* Y = new std::string("TCCCTCG");
+
+    // Case 93
+    //std::string* X = new std::string("TAAACTTCATTCCGTGGAGGAGGCCCGTACTGATTACATCGGTATGAAACTTGGCATGACATAC");
+    //std::string* Y = new std::string("AGGCAGAAATCGAAATCAGTATGGCCTAGGATCCTGCGGTTGCAATATATAGCATCCGGAATGT");
+
+    // Case 93 half
+    //std::string* X = new std::string("ATTACATCGGTATGAAACTTGGCATGACATAC");
+    //std::string* Y = new std::string("CCTGCGGTTGCAATATATAGCATCCGGAATGT");
+    //                                  ACTTGGCATGACATAC
+    //                                  ATAGCATCCGGAATGT
+    //std::string* X = new std::string("ATTACATCGGTATGAA");
+    //std::string* Y = new std::string("CCTGCGGTTGCAATAT");
+
+    //                                  TGACATAC
+    //                                  CGGAATGT
+    //std::string* X = new std::string("ACTTGGCA");
+    //std::string* Y = new std::string("ATAGCATC");
+
+    std::string* X = new std::string("TGACATAC");
+    std::string* Y = new std::string("CGGAATGT");
 
 
 //

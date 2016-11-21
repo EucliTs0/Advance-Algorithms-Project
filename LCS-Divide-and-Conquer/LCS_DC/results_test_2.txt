@@ -91,7 +91,7 @@ Results of running LCS over X001.txt..X100.txt and Y001..Y100.txt:
 90, 38
 91, 0
 92, 2
-93, 41
+93, 40
 94, 161
 95, 658
 96, 2
