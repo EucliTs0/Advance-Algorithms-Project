@@ -11,7 +11,6 @@
 #include <math.h>
 #include <cmath>
 
-
 #define MAXINT INT_MAX
 
 using namespace std;
