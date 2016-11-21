@@ -21,7 +21,7 @@ void printNeatly(vector<string>, int);
 char *lcs2(char*, char*);
 //string lcs_DnC(string, string);
 char *convert(const std::string & s);
-int lcs(string, string);
+int count_lcs(string, string);
 bool validUTF8_file(const char*);
 void fix_utf8_string(string&);
 //void remove_sw(string, string);
@@ -188,7 +188,7 @@ int main() {
          cout << endl;
          cout << "LCS is: " << result;
          cout << endl;
-         L = lcs(text, original_text);
+         L = count_lcs(text, original_text);
          cout << endl;
          cout << "Length of LCS: " << L;
 
