@@ -230,7 +230,6 @@ void backward_space_efficient_lcs_length(std::string* String_1,
 *                             long string_2_begin,     <- Beginning of String 2
 *                             long string_2_end,       <- End of String 2
 *                             long* Q,                 <- Array with the indexing q of Size size_of(String 1)
-*                             std::set<std::pair<long, long>>* LCS_set,  <- A set structure to store the set of indexes (of String 1) for the LCS
 *                             std::set<long>* LCS_xset,
 *                             std::set<long>* LCS_yset
 *                             )
@@ -239,7 +238,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                             long string_1_begin, long string_1_end,
                             long string_2_begin, long string_2_end,
                             long* Q,
-                            std::set< std::pair<long, long> >* LCS_set,
                             std::set<long>* LCS_xset,
                             std::set<long>* LCS_yset
                             ){
@@ -266,7 +264,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
         if(String_1->at(string_1_end) == String_2->at(string_2_end)) {
             /** Add to the LCS and search over string_1_end - 1, string_2_end - 1 */
 
-            LCS_set->insert(std::make_pair(string_1_end + 1, string_2_end + 1));
             LCS_xset->insert(string_1_end + 1);
             LCS_yset->insert(string_2_end + 1);
 
@@ -297,7 +294,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                 if(String_1->at(string_1_begin) == String_2->at(ii)){
                     //**
                     // LCS_set->insert(string_1_begin);
-                    LCS_set->insert(std::make_pair(string_1_begin + 1, ii + 1));
                     LCS_xset->insert(string_1_begin + 1);
                     LCS_yset->insert(ii + 1);
 
@@ -322,7 +318,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                 if(String_1->at(string_1_begin) == String_2->at(ii)) {
                     // ++
                     // LCS_set->insert(string_1_begin);
-                    LCS_set->insert(std::make_pair(string_1_begin + 1, ii + 1));
                     LCS_xset->insert(string_1_begin + 1);
                     LCS_yset->insert(ii + 1);
                     jj = ii + 1;
@@ -338,7 +333,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                 if(String_1->at(string_1_begin + 1) == String_2->at(ii)) {
                     // ++
                     // LCS_set->insert(string_1_begin + 1);
-                    LCS_set->insert(std::make_pair(string_1_begin + 2, ii + 1));
                     LCS_xset->insert(string_1_begin + 2);
                     LCS_yset->insert(ii + 1);
 
@@ -358,7 +352,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                 if(String_2->at(string_2_begin) == String_1->at(jj)) {
                     // ++
                     // LCS_set->insert(jj);
-                    LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 1));
                     LCS_xset->insert(jj + 1);
                     LCS_yset->insert(string_2_begin + 1);
 
@@ -380,7 +373,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                 if(String_2->at(string_2_begin) == String_1->at(jj)) {
                     // ++
                     // LCS_set->insert(jj);
-                    LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 1));
                     LCS_xset->insert(jj + 1);
                     LCS_yset->insert(string_2_begin + 1);
                     ii = jj + 1;
@@ -395,7 +387,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
                 if(String_2->at(string_2_begin + 1) == String_1->at(jj)) {
                     // ++
                     // LCS_set->insert(jj);
-                    LCS_set->insert(std::make_pair(jj + 1, string_2_begin + 2));
                     LCS_xset->insert(jj + 1);
                     LCS_yset->insert(string_2_begin + 2);
                     if(DEBUG_LCS_D_C){
@@ -483,7 +474,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
     if(q_index != 0 && q_index != string_1_begin){
         if(String_1->at(q_index_x) == String_2->at(string_2_middle))
         {
-            LCS_set->insert(std::make_pair(q_index, string_2_middle + 1));
             LCS_xset->insert(q_index);
             LCS_yset->insert(string_2_middle + 1);
 
@@ -497,13 +487,12 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
         if(DEBUG_LCS_D_C){
             std::cout << "\n[" << __LINE__ << "] Calling recursively lcs_divide_and_conquer(String_1, String_2, "
                       << string_1_begin << ", " << string_1_end << ", " << string_2_middle + 1 << ", " << string_2_end
-                      << ", Q, LCS_set, LCS_xset, LCS_yset)" << std::endl;
+                      << ", Q, LCS_xset, LCS_yset)" << std::endl;
         }
         lcs_divide_and_conquer(String_1, String_2,
                                string_1_begin, string_1_end,
                                string_2_middle + 1, string_2_end,
                                Q,
-                               LCS_set,
                                LCS_xset,
                                LCS_yset
                                );
@@ -513,13 +502,12 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
             if(DEBUG_LCS_D_C){
                 std::cout << "\n[" << __LINE__ << "] Calling recursively lcs_divide_and_conquer(String_1, String_2, "
                           << string_1_begin << ", " << string_1_end << ", " << string_2_begin << ", " << string_2_middle
-                          << ", Q, LCS_set, LCS_xset, LCS_yset)" << std::endl;
+                          << ", Q, LCS_xset, LCS_yset)" << std::endl;
             }
             lcs_divide_and_conquer(String_1, String_2,
                                    string_1_begin, string_1_end,
                                    string_2_begin, string_2_middle,
                                    Q,
-                                   LCS_set,
                                    LCS_xset,
                                    LCS_yset
                                   );
@@ -529,26 +517,24 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
             if(DEBUG_LCS_D_C){
                 std::cout << "\n[" << __LINE__ << "] Calling recursively lcs_divide_and_conquer(String_1, String_2, "
                           << string_1_begin << ", " << q_index_x << ", " << string_2_begin << ", " << string_2_middle
-                          << ", Q, LCS_set, LCS_xset, LCS_yset)" << std::endl;
+                          << ", Q, LCS_xset, LCS_yset)" << std::endl;
             }
             lcs_divide_and_conquer(String_1, String_2,
                                    string_1_begin, q_index_x,
                                    string_2_begin, string_2_middle,
                                    Q,
-                                   LCS_set,
                                    LCS_xset,
                                    LCS_yset
                                    );
             if(DEBUG_LCS_D_C){
                 std::cout << "\n[" << __LINE__ << "] Calling recursively lcs_divide_and_conquer(String_1, String_2, "
                           << q_index_x + 1 << ", " << string_1_end << ", " << string_2_middle + 1 << ", " << string_2_end
-                          << ", Q, LCS_set, LCS_xset, LCS_yset)" << std::endl;
+                          << ", Q, LCS_xset, LCS_yset)" << std::endl;
             }
             lcs_divide_and_conquer(String_1, String_2,
                                    q_index_x + 1, string_1_end,
                                    string_2_middle + 1, string_2_end,
                                    Q,
-                                   LCS_set,
                                    LCS_xset,
                                    LCS_yset
                                    );
@@ -567,7 +553,6 @@ void lcs_divide_and_conquer(std::string* String_1, std::string* String_2,
 */
 void LCS_DIVIDE_CONQUER(std::string* String_1,
                         std::string* String_2,
-                        std::set< std::pair<long, long> >* LCS_Set,
                         std::set<long>* LCS_XSet,
                         std::set<long>* LCS_YSet
                         ) {
@@ -590,7 +575,6 @@ void LCS_DIVIDE_CONQUER(std::string* String_1,
                            0, length_1 - 1,
                            0, length_2 - 1,
                            Q_temp,
-                           LCS_Set,
                            LCS_XSet,
                            LCS_YSet
                            );
@@ -600,7 +584,6 @@ void LCS_DIVIDE_CONQUER(std::string* String_1,
 * Testing on different sets of X and Y strings
 */
 int maint(){
-    std::set< std::pair<long, long> >* LCS_Set = new std::set< std::pair<long, long> >();
     std::set<long>* LCS_XSet = new std::set<long>();
     std::set<long>* LCS_YSet = new std::set<long>();
 
@@ -728,7 +711,7 @@ int maint(){
 //        }
 //    }
 
-    LCS_DIVIDE_CONQUER(X, Y, LCS_Set, LCS_XSet, LCS_YSet);
+    LCS_DIVIDE_CONQUER(X, Y, LCS_XSet, LCS_YSet);
     long lcs_size = LCS_XSet->size();
 
 
@@ -763,7 +746,7 @@ int maint(){
 
 
     }
-    delete LCS_Set;
+
     delete LCS_XSet;
     delete LCS_YSet;
     return 0;

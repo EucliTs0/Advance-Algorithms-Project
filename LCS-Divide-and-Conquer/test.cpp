@@ -50,7 +50,6 @@ int main(int argc, char** argv)
         std::string lineY;
         std::ifstream file(X_file);
 
-        std::set< std::pair<long, long> >* LCS_Set;
         std::set<long>* LCS_XSet;
         std::set<long>* LCS_YSet;
 
@@ -61,18 +60,15 @@ int main(int argc, char** argv)
                 X = &lineX;
                 Y = &lineY;
 
-                std::set< std::pair<long, long> >* LCS_Set = new std::set< std::pair<long, long> >();
-                std::set<long>* LCS_XSet = new std::set<long>();
-                std::set<long>* LCS_YSet = new std::set<long>();
-                LCS_DIVIDE_CONQUER(X, Y, LCS_Set, LCS_XSet, LCS_YSet);
+                LCS_XSet = new std::set<long>();
+                LCS_YSet = new std::set<long>();
+                LCS_DIVIDE_CONQUER(X, Y, LCS_XSet, LCS_YSet);
                 long lcs_size = LCS_XSet->size();
 
                 std::cout << i << ", " << lcs_size << std::endl;
                 resultsfile << i << ", " << lcs_size << "\n";
 
-                delete LCS_Set;
                 delete LCS_XSet;
-                delete LCS_YSet;
             }
         }
     }
