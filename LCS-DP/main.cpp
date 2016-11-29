@@ -14,30 +14,33 @@
 #include <locale.h>
 #include <utf8.h>
 #include <locale>
+#include <set>
+
 
 using namespace std;
+
+void lcs(string, string);
 string pNgreedy(string, int);
 void printNeatly(vector<string>, int);
 char *lcs2(char*, char*);
-//string lcs_DnC(string, string);
 char *convert(const std::string & s);
-int count_lcs(string, string);
 bool validUTF8_file(const char*);
 void fix_utf8_string(string&);
 //void remove_sw(string, string);
 void stripChars(string&);
 
+
 int main() {
-    string illegalChars = """""\\/:?,.=''-_+)[]:<>(|";
+    string illegalChars = """""\?,.=''-_+)[]{}:</>(|";
     int n = 70;
     int L;
     //Checking if files are in utf8 encoding
-    validUTF8_file("corpus/g4pD_taskc.txt");
-    validUTF8_file("corpus/orig_taskc.txt");
+    validUTF8_file("corpus/g0pA_taska.txt");
+    validUTF8_file("corpus/orig_taska.txt");
         ifstream mytextfile;
 
     try {
-        mytextfile.open("corpus/g4pD_taskc.txt");
+        mytextfile.open("corpus/g0pA_taska.txt");
         if (!mytextfile) {
             cout << "Error opening file " << endl;
             return 1;
@@ -51,7 +54,7 @@ int main() {
     ifstream originalfile;
 
     try {
-        originalfile.open("corpus/orig_taskc.txt");
+        originalfile.open("corpus/orig_taska.txt");
         if (!originalfile) {
             cout << "Error opening file " << endl;
             return 1;
@@ -111,7 +114,7 @@ int main() {
         words_original.push_back(word_original);
     }
 
-    //From <vector>string to string
+    //From vector<string> to string
 
     stringstream ss;
     stringstream ss1;
@@ -171,31 +174,17 @@ int main() {
         strcpy(wordsc, text.c_str());
         strcpy(words_originalc, original_text.c_str());
 
-        cout << pNgreedy(text, n);
-        cout << endl;
-        cout << endl;
+        cout << pNgreedy(text, n) << "\n";
         cout << endl;
 
-        cout << pNgreedy(original_text, n);
+
+        cout << pNgreedy(original_text, n) << "\n";
         cout << endl;
-        cout << endl;
-        cout << endl;
 
-        string result;
-        result = lcs2(wordsc, words_originalc);
+        //Print the LCS
+         lcs(text, original_text);
 
 
-         cout << endl;
-         cout << "LCS is: " << result;
-         cout << endl;
-         L = count_lcs(text, original_text);
-         cout << endl;
-         cout << "Length of LCS: " << L;
-
-    // printNeatly(result, n);
-    cout << endl;
-    cout << endl;
-    cout << pNgreedy(result, n) << endl;
 
     delete [] wordsc;
     delete [] words_originalc;
