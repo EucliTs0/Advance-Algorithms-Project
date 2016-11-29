@@ -15,57 +15,88 @@
 #include <utf8.h>
 #include <locale>
 #include <set>
+#include <bits/stdc++.h>
 
 using namespace std;
+string pNgreedy(string text, int);
+void lcs(string str1, string str2) {
+    int n = str1.size();
+    int m = str2.size();
+    int result = 0;
+    int tmp1, tmp2;
+    int l = 70;
 
-string lcs(string& str1, string& str2) {
-    if (str1.empty() || str2.empty()) {
-        return 0;
+    int **c = new int*[n + 1];
+    for (int i = 0; i < n + 1; i++) {
+        c[i] = new int[m + 1];
     }
 
-    int *curr = new int[str2.size()];
-    int *prev = new int[str2.size()];
-    int *s = nullptr;
-    int maxSubstr = 0;
-    string longest;
+    for (int i = 0; i <= n; i++){
+        c[i][0] = 0;
+    }
 
-    for (unsigned int i = 0; i < str1.size(); i++) {
-        for (unsigned int j = 0; j < str2.size(); j++) {
-            if (str1[i] != str2[j]) {
-                curr[j] = 0;
+    for (int j = 0; j <= m; j++) {
+        c[0][j] = 0;
+    }
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= m; j++) {
+            if (str1[i - 1] == str2[j - 1]) {
+                c[i][j] = c[i - 1][j - 1] + 1;
             }
             else {
-                if (i == 0 || j == 0) {
-                    curr[j] = 1;
-                }
-                else {
-                    curr[j] = 1 + prev[j - 1];
-                }
-                if (maxSubstr < curr[j]) {
-                    maxSubstr = max(maxSubstr, curr[j]);
-                    longest.clear();
-
-
-                    //cout << longest.append(str1.substr(i - maxSubstr + 1, i + 1));
-                }
-                if (maxSubstr == curr[j]) {
-                    longest.append(str1.substr(i - maxSubstr + 1, i + 1));
-
-                    }
-                }
+                c[i][j] = c[i - 1][j - 1];
             }
-            s = curr;
-            curr = prev;
-            prev = s;
         }
+    }
+    for (int i = 0; i <= n; i++) {
+        for (int j = 0; j <= m; j++) {
+            if (c[i][j] > result) {
+                result = c[i][j];
+                tmp1 = i;
+                tmp2 = j;
+            }
+        }
+    }
 
-
-
-
-    delete [] curr;
-    delete [] prev;
-    cout << "Length of LCS is: " << longest.size();
+    cout <<"Length of LCS is: " << result << "\n";
     cout << endl;
-    return longest;
+
+    //Print the LCS
+    vector<char> printlcs;
+    while (c[tmp1][tmp2] != 0) {
+        printlcs.push_back(str1[tmp1 - 1]);
+        tmp1--;
+        tmp2--;
+    }
+    reverse(printlcs.begin(), printlcs.end());
+
+    vector<char>::iterator it;
+    it = printlcs.begin();
+
+    //From vector to string //
+    stringstream ss;
+    for (int i = 0; i <= printlcs.size(); i++) {
+            //if (i != 0)
+            //ss << " ";
+            ss << printlcs[i];
+    }
+    string s = ss.str();
+
+
+    //Print neatly the LCS
+    cout << pNgreedy(s, l) << "\n";
+
+    /*while (it != printlcs.end()) {
+        cout << *it;
+        it++;
+    }*/
+
+    for (int k = 0; k <= n; k++)
+        delete c[k];
+
+        delete [] c;
+
+
 }
 
