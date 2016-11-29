@@ -5,113 +5,67 @@
 #include <vector>
 #include <fstream>
 #include <stdio.h>
-#include <fstream>
 #include <stdlib.h>
 #include <cctype>
 #include <math.h>
 #include <cmath>
 #include <sstream>
 #include <algorithm>
-
-#define NEITHER 0
-#define UP 1
-#define LEFT 2
-#define UP_AND_LEFT 3
+#include <locale.h>
+#include <utf8.h>
+#include <locale>
+#include <set>
 
 using namespace std;
 
-char* lcs2(char *x, char *y) {
-    int n = strlen(x);
-    int m = strlen(y);
-    int i, j, pos;
-    char* lcs_p;
-
-    int **c = new int*[(n + 1)*sizeof(int)];
-    int **b = new int*[(n + 1)*sizeof(int)];
-
-    for (i = 0; i <= n; i++) {
-        c[i] = new int[(m + 1)*sizeof(int)];
-        b[i] = new int[(m + 1)*sizeof(int)];
+string lcs(string& str1, string& str2) {
+    if (str1.empty() || str2.empty()) {
+        return 0;
     }
 
-    /* Initialization */
+    int *curr = new int[str2.size()];
+    int *prev = new int[str2.size()];
+    int *s = nullptr;
+    int maxSubstr = 0;
+    string longest;
 
-    for (i = 0; i <= n; i++){
-        c[i][0] = 0;
-        b[i][0] = UP;
-    }
-
-    for (j = 0; j <= m; j++){
-        c[0][j] = 0;
-        b[0][j] = LEFT;
-    }
-
-    /* DP */
-
-    for (i = 1; i <= n; i++){
-        for (j = 1; j <= m; j++){
-            if (x[i - 1] == y[j - 1]){
-                c[i][j] = c[i - 1][j - 1] + 1;
-                b[i][j] = UP_AND_LEFT;
+    for (unsigned int i = 0; i < str1.size(); i++) {
+        for (unsigned int j = 0; j < str2.size(); j++) {
+            if (str1[i] != str2[j]) {
+                curr[j] = 0;
             }
             else {
-                c[i][j] = c[i - 1][j - 1];
-                b[i][j] = NEITHER;
+                if (i == 0 || j == 0) {
+                    curr[j] = 1;
+                }
+                else {
+                    curr[j] = 1 + prev[j - 1];
+                }
+                if (maxSubstr < curr[j]) {
+                    maxSubstr = max(maxSubstr, curr[j]);
+                    longest.clear();
+
+
+                    //cout << longest.append(str1.substr(i - maxSubstr + 1, i + 1));
+                }
+                if (maxSubstr == curr[j]) {
+                    longest.append(str1.substr(i - maxSubstr + 1, i + 1));
+
+                    }
+                }
             }
-            if (c[i - 1][j] >= c[i][j]){
-                c[i][j] = c[i - 1][j];
-                b[i][j] = UP;
-            }
-            if (c[i][j - 1] >= c[i][j]){
-                c[i][j] = c[i][j - 1];
-                b[i][j] = LEFT;
-            }
+            s = curr;
+            curr = prev;
+            prev = s;
         }
-    }
 
-    /* Length of LCS is c[n][m] */
 
-    i = n;
-    j = m;
-    pos = c[i][j];
 
-    lcs_p = new char[(pos + 1)*sizeof(char)];
 
-    lcs_p[pos--] = 0;
-
-    while ( i > 0 || j > 0){
-        if (b[i][j] == UP_AND_LEFT){
-            i--;
-            j--;
-            lcs_p[pos--] = x[i];
-        }
-        else if (b[i][j] == UP){
-            i--;
-        }
-        else if (b[i][j] == LEFT){
-            j--;
-        }
-    }
-    cout << "Length of LCS is: " << c[n][m];
-    double D = double(c[n][m]) / double(min(m, n));
+    delete [] curr;
+    delete [] prev;
+    cout << "Length of LCS is: " << longest.size();
     cout << endl;
-
-    /*for (int x = 0; x < n; x++) {
-        for (int y = 0; y < m; y++) {
-            cout << b[x][y] << " ";
-        }
-    }*/
-
-    for (i = 0; i <= n; i++){
-        delete c[i];
-        delete b[i];
-    }
-    delete [] c;
-    delete [] b;
-    cout << endl;
-    cout << "LCS score: " << D;
-
-    return lcs_p;
+    return longest;
 }
-
 
