@@ -5,11 +5,18 @@
 #include <vector>
 #include <fstream>
 #include <stdio.h>
-#include <fstream>
 #include <stdlib.h>
 #include <cctype>
 #include <math.h>
 #include <cmath>
+#include <sstream>
+#include <algorithm>
+#include <locale.h>
+#include <utf8.h>
+#include <locale>
+#include <set>
+
+
 
 #define MAXINT INT_MAX
 
@@ -20,11 +27,18 @@ using namespace std;
 
    n is the length of words */
 
-int giveLines(int *, int, vector<string>, int);
+int giveLines(int *, int, vector<string> , int);
 
-void printNeatly(vector<string> words, int M){
+void printNeatly(string w, int M){
     /* Let extras[1...n, 1...n], lc[1...n, 1...n] and c[0...n]
     be new arrays */
+    stringstream ss(w);
+    string token;
+    vector<string> words;
+    while (ss >> token) {
+        words.push_back(token);
+    }
+
 
     int n = words.size();
 
