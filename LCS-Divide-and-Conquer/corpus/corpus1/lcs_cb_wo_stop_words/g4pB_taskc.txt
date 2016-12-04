@@ -1,0 +1,3 @@
+vector space model or term vector model algebraic model representing text documents and objects general vectors identifiers index terms it used information filtering information retrieval indexing relevancy rankings its first e smart information retrieval system
+a document represented vector each dimension corresponds separate term if term s document value vector zero al different as computing values also known term weights eed one o schemes tfidf weighting
+the definition term depend application typically terms ewords ewords longer phrases i words ce terms dimensionality vector number words vocabularyt eistct osinuse vectors inta nge orlsetavaull coinsal says ury document tr ortnal match eans term ury er encotere document

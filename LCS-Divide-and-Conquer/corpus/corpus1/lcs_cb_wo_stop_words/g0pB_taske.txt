@@ -1,0 +1,4 @@
+dynamic programming method solving problems exhibit properties overlapping subproblems optimal substructure ths much ie method naie metds the ord programmin dynamic programming reates optimization ol rere mthemaic programming ricar en orginall ined term ecri mto solin proe o ns find st eiion oe ae  rine med cete aning
+optimal substructure means optimal solutions subproblems used find optimal solutions overall problem o example shortest path goal vertex graph first comput shortest path goal adjacent vertices using i best overall path on re in na o prle ti en threestep process
+1 break problem smaller subproblems
+2 ersily us threestep process cue optimal sol construct optimal solution using ompute optial subproblems originl problemis proes cotines recursie woring subproblems iviing susubproblems orth simple ase reached one easil solvable

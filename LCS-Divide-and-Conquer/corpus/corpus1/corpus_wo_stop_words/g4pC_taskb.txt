@@ -1,0 +1,6 @@
+since develop web 20 google one popular search engine world many algorithms web search accordingly implementations link analysis algorithms typical discount internal links the word computer exploited web search engines google thus web like graph pagerank first technique analysing link assigns every node
+web graph numerical score 0 1 since pagerank important algorithms used google engine for example four pages group a b c d if every page link a as pagerank value shoule total value b c d 
+pra  prb  prc  prd
+moreover q  015 use web page like general algorithm below
+
+however disadvantage pagerank algorithm renew system slow

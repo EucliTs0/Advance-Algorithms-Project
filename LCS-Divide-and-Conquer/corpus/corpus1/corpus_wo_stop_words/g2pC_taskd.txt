@@ -1,0 +1,16 @@
+in probability theory bayes theorem relates conditional marginal probabilities two random events it often used compute posterior probabilities given observations
+
+bayes theorem expressed mathematically as
+
+pab  pbapapb
+
+pab conditional probability a given b pa prior probability a pb prior probability b pba conditional probability b given a
+
+bayes theorem relates conditional marginal probabilities two random events pa pb valid common interpretations probability for example school made 35 boys 25 girls girls wear skirts trousers equal numbers boys wear trousers if student observed distance wearing trousers bayes theorem used determine probability student girl
+
+pa probability student girl which 25
+pba probability student wearing trousers given student girl 05
+pb probability random student wearing trousers calculated pb  pbapa  pbapa  denotes complementary event 08
+therefore probability using formula 025
+
+bayes theorem often used compute posterior probabilities given observations instance probability proposed medical diagnosis correct given certain observed symptoms

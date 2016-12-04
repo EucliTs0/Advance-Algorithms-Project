@@ -1,0 +1,2 @@
+vector space model algebraic model representing text documents vectors identifiers a ple e tr sed rti filtering information erieval indexing relevancy ring ts i e sa mo ialy document rered vector ea m correspond er ei ter ue a tr oe different si values or spe oe eonse tfidf weighting e aple ee definition term ens aoal terms single word keywords longer phrases hener niue words vocabulary ene disint words u rs
+he vector space modelling l  e poles siit ae r trmsot keywords must precise ach documents or simirt ale poesent t documents sed toc wont associated term oculr ers

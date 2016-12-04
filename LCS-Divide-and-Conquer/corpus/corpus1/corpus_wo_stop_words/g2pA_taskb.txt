@@ -1,0 +1,5 @@
+the algorithm google uses assign weighting element linked set documents purpose measuring relative importance within set
+a particular websites pagerank results vote pages internet important website actually is a link page seen vote support the pagerank depends pagerank rating number pages links it additionally page linked pages high pagerank rating increases rating original page
+the pagerank scale ranges 010 the rating certain page generally based upon quantity inbound links well perceived quality pages providing links
+pagerank could described probability distribution representing chance someone randomly clicking links reach certain page the pagerank calculations require iterations collection web pages alter approximate pagerank values accurately reflect actual rank
+in order prevent spamming google releases little information way pagerank calculated the pagerank algorithm led many sites spammed links attempt artificially inflate pagerank linked page notably blog comments message boards in 2005 nofollow tag added attribute html link used google shouldnt change pagerank linked page result link

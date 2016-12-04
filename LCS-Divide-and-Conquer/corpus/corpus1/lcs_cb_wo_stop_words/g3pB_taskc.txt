@@ -1,0 +1,2 @@
+ere lr mer model e ol prentin ete ad oet eal es eter aeapli te t sed nmto leri moelin ectr se moel document represented vector ec dimension corresponds separate term if term occur document value vector zero ifer s cmt value noneroto cale elent docen keywordserh cose e nl vector er caulate nstd cung
+the vector space model owi limitations long documents poorly represented oor mate als pote matches m rout terms otin ih rs temsees documents ma e different emant a reun false negative match there erms ae en vector space eesetato

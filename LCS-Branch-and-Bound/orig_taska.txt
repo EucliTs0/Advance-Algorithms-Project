@@ -1,0 +1,12 @@
+In object-oriented programming, inheritance way form new classes (instances called objects) using classes already defined. The inheritance concept invented 1967 Simula.
+
+The new classes, known derived classes, take (or inherit) attributes behavior pre-existing classes, referred base classes (or ancestor classes). It intended help reuse existing code little modification.
+
+Inheritance provides support representation categorization computer languages. Categorization powerful mechanism number information processing, crucial human learning means generalization (what known specific entities applied wider group given belongs relation established) cognitive economy (less information needs stored specific entity, particularities).
+
+Inheritance also sometimes called generalization, is-a relationships represent hierarchy classes objects. For instance, "fruit" generalization "apple", "orange", "mango" many others. One consider fruit abstraction apple, orange, etc. Conversely, since apples fruit (i.e., apple is-a fruit), apples may naturally inherit properties common fruit, fleshy container seed plant.
+
+An advantage inheritance modules sufficiently similar interfaces share lot code, reducing complexity program. Inheritance therefore another view, dual, called polymorphism, describes many pieces code controlled shared control code.
+Inheritance typically accomplished either overriding (replacing) one methods exposed ancestor, adding new methods exposed ancestor.
+
+Complex inheritance, inheritance used within design sufficiently mature, may lead Yo-yo problem.

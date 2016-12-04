@@ -1,0 +1,17 @@
+in probability theory bayes theorem often called bayes law rev
+thomas bayes relates conditional marginal probabilities
+two random events it used compute posterior probabilities given
+observations for example person may observed certain
+symptoms bayes theorem used compute probability
+proposed diagnosis correct
+
+as formal theorem bayes theorem valid common
+interpretations probability however plays central role
+debate around foundations statistics frequentist
+bayesian interpretations disagree ways
+probabilities assigned other bayesians describe
+probabilities terms beliefs degrees uncertainty while
+frequentists assign probabilities random events according
+frequencies occurrence subsets populations proportions
+whole the articles bayesian probability frequentist
+probability discuss debates detail

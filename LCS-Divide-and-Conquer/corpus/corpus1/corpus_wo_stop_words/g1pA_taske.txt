@@ -1,0 +1,4 @@
+dynamic programming algorithmic technique used solve certain optimization problems object find best solution number possibilities it uses called bottomup approach meaning problem solved set subproblems turn made subsubproblemssubproblems selected used solve overall problem these subproblems solved solutions saved need recalculated again whilst calculated individually may also overlap when subproblem met again found reused solve another problem since searches possibilities also accurate this method far efficient recalculating therefore considerably reduces computation it widely used computer science applied example compress data high density bar codes
+
+dynamic programming effective therefore often used objects ordered left right whose order cannot rearranged this means works well character chains example
+

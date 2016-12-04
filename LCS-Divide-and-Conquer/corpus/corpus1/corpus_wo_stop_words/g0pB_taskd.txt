@@ -1,0 +1,26 @@
+bayes theorem relates conditional marginal probabilities
+two random events for example person may seen certain
+medical symptoms bayes theorem used compute
+probability that given observation proposed diagnosis
+right one
+
+bayes theorem forms relationship probabilities xcof
+events a b intuitively bayes theorem form describes
+way ones recognition a updated observed
+b
+
+pa  b  pb  a pa  pb
+
+pab conditional probability a given b it derived depends upon specified value b therefore also known posterior probability
+
+pba conditional probability b given a
+
+pa prior probability a it doesnt take account information b prior
+
+pb prior marginal probability b acts normalise probability
+
+to derive theorem begin definition conditional
+probability by combining rearranging two equations a
+b get lemma called product rule
+probabilities provided pb zero dividing sides
+pb renders us bayes theorem

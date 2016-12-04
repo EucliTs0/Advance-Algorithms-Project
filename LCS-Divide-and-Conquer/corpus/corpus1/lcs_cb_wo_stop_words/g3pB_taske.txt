@@ -1,0 +1,4 @@
+dynamic programming method solving problems exhibit properties overlapping subproblems optimal substructure the term originally used 1940s richard bellman
+the word programming dynamic programming particular connection computer programming all instead comes term mathematical programming synonym optimization th program optimal plan action producedfor instance finalized schedule events exhibition sometimes called program programming sense means finding acceptable plan action
+
+to say problem overlapping subproblems say subproblems used solve many different larger problems optim substrctue means optimal solutions subproblems sed ind otimal solutions oerall problem

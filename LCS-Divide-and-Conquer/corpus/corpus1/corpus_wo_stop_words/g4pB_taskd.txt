@@ -1,0 +1,15 @@
+in probability theory bayes theorem or bayes law rev thomas bayes provides relation conditional marginal probabilities two random events it usually used calculate posterior probabilities given observations for example patient might observed show certain symptoms bayes theorem could used compute probability certain diagnosis right given observation
+
+since formal theorem bayes theorem holds popular interpretations probability
+bayes theorem relates conditional marginal probabilities events b b nonvanishing probability
+
+pab  pabpapb
+
+terms bayes theorem named convention
+
+pa prior probability marginal probability a it take account information b therefore considered prior
+pab conditional probability a given b it derived depends upon specified value b usually called posterior probability
+pba conditional probability b given a
+pb aka normalizing constant prior marginal probability b
+
+obviously bayes theorem describes way ones assumptions observing eventa changed observed event b

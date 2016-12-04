@@ -1,0 +1,6 @@
+the vector space model algebraic model used represent text documents and objects generally vectors identifiers instance index terms its applications include information filtering information retrieval indexing relevancy rankings with reference model documents represented vectors each dimension corresponds separate term the value vector nonzero term occurs document several different ways developed calculating values also known term weights one best known schemes tfidf term frequencyinverse document frequency weighting
+
+the model used determine relevancy rankings documents keyword search using assumptions document similarities theory comparing original query vector where query represented kind vector documents deviation angles document vector
+
+the classic vector space model put forward salton wong yang known term frequencyinverse document frequency model in classic model term specific weights document vectors products local global parameters in simpler term count model term specific weights counts term occurrences therefore include global parameter
+

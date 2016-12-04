@@ -1,0 +1,15 @@
+vector
+space
+model
+documents
+represented
+document
+vector
+following
+1
+documents
+a
+document
+word
+4
+document

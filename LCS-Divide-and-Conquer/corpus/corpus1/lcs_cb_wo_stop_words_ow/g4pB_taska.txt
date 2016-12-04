@@ -1,0 +1,11 @@
+inheritance
+inherit
+attributes
+it
+inheritance
+classes
+etc
+inherit
+inheritance
+methods
+methods

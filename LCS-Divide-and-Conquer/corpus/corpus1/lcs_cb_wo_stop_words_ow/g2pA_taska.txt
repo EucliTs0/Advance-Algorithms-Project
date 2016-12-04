@@ -1,0 +1,10 @@
+inheritance
+reuse
+code
+inheritance
+information
+means
+classes
+may
+methods
+may

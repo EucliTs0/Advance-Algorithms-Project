@@ -17,7 +17,7 @@ namespace patch
 }
 
 
-int main(int argc, char** argv)
+int maint(int argc, char** argv)
 {
     std::ofstream resultsfile;
     resultsfile.open ("results_test.txt");

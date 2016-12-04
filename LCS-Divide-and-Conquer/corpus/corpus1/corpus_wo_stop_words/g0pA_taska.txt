@@ -1,0 +1,22 @@
+inheritance basic concept objectoriented programming
+basic idea create new classes add extra detail
+existing classes this done allowing new classes reuse
+methods variables existing classes new methods
+classes added specialise new class inheritance models
+iskindof relationship entities or objects example
+postgraduates undergraduates kinds student this kind
+relationship visualised tree structure student
+would general root node postgraduate
+undergraduate would specialised extensions student
+node or child nodes in relationship student would
+known superclass parent class whereas postgraduate would
+known subclass child class postgraduate
+class extends student class
+
+inheritance occur several layers visualised would
+display larger tree structure for example could extend
+postgraduate node adding two extra extended classes
+called msc student phd student types student
+kinds postgraduate student this would mean msc
+student phd student classes would inherit methods variables
+postgraduate student classes

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1479805805 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\test.cpp
+1480011112 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\test.cpp
 	<fstream>
 	<string>
 	<iostream>
@@ -8,7 +8,7 @@
 	<sstream>
 	"lcsdc.h"
 
-1479805745 c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcsdc.h
+1479806205 c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcsdc.h
 	<string>
 	<math.h>
 	<set>
@@ -17,11 +17,46 @@
 1446667744 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcs_dc\main.cpp
 	<iostream>
 
-1479805669 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcs_divide_and_conquer.cpp
+1479806205 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcs_divide_and_conquer.cpp
 	<windows.h>
 	<iostream>
 	<string>
 	<math.h>
 	<set>
 	<utility>
+
+1479831664 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcsdc.cpp
+	<windows.h>
+	<iostream>
+	<string>
+	<math.h>
+	<set>
+	<utility>
+
+1480153519 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\lcsrecursive.cpp
+	<windows.h>
+	<iostream>
+	<string>
+	<math.h>
+	<set>
+	<utility>
+
+1480336588 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\test_comparisson.cpp
+	<fstream>
+	<string>
+	<iostream>
+	<set>
+	<utility>
+	<sstream>
+	"lcsdc.h"
+
+1480337499 source:c:\users\jorge\desktop\mldm 2016-2017\books\aa\project\advance-algorithms-project\lcs-divide-and-conquer\analysis_test.cpp
+	<fstream>
+	<time.h>
+	<string>
+	<iostream>
+	<set>
+	<utility>
+	<sstream>
+	"lcsdc.h"
 

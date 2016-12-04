@@ -1,0 +1,1 @@
+the representation set documents vectors common vector space known vector space vector space model fundamental host information retrieval ir operations including scoring documents query document classification document clusteringwe first develop basic ideas underlying vector space scoring pivotal step development view queries vectors vector space document collection

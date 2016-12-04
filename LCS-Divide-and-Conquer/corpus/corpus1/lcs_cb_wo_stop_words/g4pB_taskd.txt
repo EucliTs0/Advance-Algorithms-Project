@@ -1,0 +1,7 @@
+in probability theory bayes theorem o bayes law rev thomas bayes relat conditional marginal probabilities two random events it  used cute posterior probabilities given observations for example patient m observed certain symptoms bayes theorem used compute probability r diagnosis rt given observationse formal theorem bayes theorem holds popular interpretations probability
+bayes theorem relates conditional marginal probabilities events b b nonvanishing probability
+pab  abpapb
+term bayes theorem convention
+pa prior probability marginal probability a it take account information b pab conditional probability a given b it derived depends upon specified value b
+pba conditional probability b given a
+pb prior marginal probability boiosly bayes theorem describes way ones is observing a aed observed b

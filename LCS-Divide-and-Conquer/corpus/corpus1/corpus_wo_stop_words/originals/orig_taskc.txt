@@ -1,0 +1,8 @@
+vector space model or term vector model algebraic model representing text documents and objects general vectors identifiers as example index terms it used information filtering information retrieval indexing relevancy rankings its first use smart information retrieval system
+a document represented vector each dimension corresponds separate term if term occurs document value vector nonzero several different ways computing values also known term weights developed one best known schemes tfidf weighting see example below
+the definition term depends application typically terms single words keywords longer phrases if words chosen terms dimensionality vector number words vocabulary the number distinct words occurring corpus
+the vector space model following limitations
+1 long documents poorly represented poor similarity values a small scalar product large dimensionality
+2 search keywords must precisely match document terms word substrings might result false positive match
+3 semantic sensitivity documents similar context different term vocabulary wont associated resulting false negative match
+4 the order terms appear document lost vector space representation

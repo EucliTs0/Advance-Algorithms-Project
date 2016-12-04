@@ -1,0 +1,10 @@
+inheritance allows programs developed object orientated language reuse code without replicated unnecessarily elsewhere within program
+
+to achieve this programmer note generalisations similarities various aspects program
+
+for example program could exist model different forms transport at first glance car train may much common but abstractly speed travelling direction current position
+methods utilising data specified high inheritance hierarchy example transport class for example could method works new position train travelling x minutes direction y likewise might want able find information object type car
+inheritance means method defined superclass train car classes car train object utilise it
+
+the train car subclasses said extend transport class additional characteristics dont share eg passenger capacity would class variable car train but different values train may methods along lines toilet engaged
+if wanted add additional forms transport aeroplane may wish also toilet engaged function then could extended hierarchy mass transport class extends transport class under youd train aeroplane would inherit characteristics super classes

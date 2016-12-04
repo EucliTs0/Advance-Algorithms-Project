@@ -1,0 +1,10 @@
+in vector space model documents information retrieved represented vectors the term weighting indentifies success failure vector space method terms basically words indexing unit used identify contents text furthermore term weighting scheme plays important role similarity measure the similarity measures largely identify retrieval efficiency particular information retrieval system
+this largely depends formulas where formulas depend frequencies within document depend interdocument frequencies the main components formulas follows
+binary
+binary formula gives every word appears document equal relevance this useful number times word appears considered important
+term frequency
+this formula counts many times term occurs document the times term occurs document likely relevant document used alone favors common words long documents this formula gives credit words appears frequently often much credit
+augmented normalized term frequency
+this formula tries give credit word appears give additional credit words appear frequently
+logarithmic term frequency
+logarithms way deemphasize eect frequency literature proposes log alternate log used

@@ -1,0 +1,7 @@
+pagerank algorithm developed google provide relevant search results users queries pagerank along similar algorithms developed googles competitors search engines part second generation technologies designed rate importance web pages first solely based keywords page content metadata could easily influenced wishing obtain higher ranking lessrelevant pages
+
+the different pagerank tries determine web pages relevance users attempting determine importance it assigning value importance dependant upon number web sites link page taking account importance value pagerank pages the pagerank computed iteratively found pagerank values converge fairly rapidly
+
+although much better simple keywordbased ranking algorithms pagerank infallible internet advertising revenue make  quite frequently web sites income people run web sites always trying trick system giving pages higher pagerank one googles attempts counter google toolbar browser plugin
+
+google toolbar free tool provides number useful functions convenient location users web browser window googles payoff gets track behaviour actual users this allows see whether pagerank algorithm accurate assigning high pagerank values relevant web pages and importantly low values irrelevant try fool system

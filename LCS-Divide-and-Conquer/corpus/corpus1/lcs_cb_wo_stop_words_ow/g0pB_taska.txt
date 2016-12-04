@@ -1,0 +1,13 @@
+inheritance
+concept
+it
+reuse
+existing
+code
+classes
+for
+may
+inherit
+inheritance
+another
+methods

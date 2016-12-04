@@ -1,0 +1,9 @@
+the first thing consider talking googles pagerank algorithm pagerank essentially important web page internet so essence popularity contest webpages
+
+originally search engines used highest keyword density however could abused keyword spamming implemented instead google uses system based sites linking other eg important site linked higher site become
+
+the algorithm google actually users based 4 factors total number pages dampening factor pagerank single page number outbound links a dampening factor used counter random surfers get bored switch pages this formula reused results seem converge together find pagerank calculated iteratively
+
+pagerank used google measure popularity site number 010 assigned webpage depending pagerank this allows google calculate marketing value different webpages
+
+also noted pagerank periodically updated every 3 6 months counter hackers influence different pageranks

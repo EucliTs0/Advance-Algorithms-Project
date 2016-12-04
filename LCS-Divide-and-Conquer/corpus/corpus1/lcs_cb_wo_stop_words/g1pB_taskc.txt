@@ -1,0 +1,3 @@
+te algebraic model representing text documents objects vectors identifiers a eae de it used information filtering indexing relevancy rankings it first use smart information retrieval system
+ document represented vector dimension corresponds separate term  term occurs document value vector nonzero er ways computing values weights developed e o tfidf weightingee aplo definition term aies single words keywords longer phrases se terms dimensionality vector number words vocular the numer ditinctors ocurin corp
+the vector space model oo imitas long documents poorly represented posimates ma rured search keywords precisely match document terms false tive match c en documents sar context different term vocabulary o sce resenatiet  order terms document

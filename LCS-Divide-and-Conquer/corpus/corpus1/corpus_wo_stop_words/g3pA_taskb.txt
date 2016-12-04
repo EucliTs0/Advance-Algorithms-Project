@@ -1,0 +1,4 @@
+the google search engine uses link analysis algorithm called pagerank assign relative numerical importance set hyperlinked documents world wide web
+for given page its importance the pagerank value results ballot among pages set for page give vote another must link it pagerank depends number incoming links anf pagerank pages provide links pages linked many high ranking pages obtain high rank if page incoming links support page
+the pagerank numeric weighting 0 10 denotes important site googles eyes like richter scale pagerank value logerithmic scale derived probability in addition quantity quality inbound linksother factors affect pagerank number visits page search words used page
+to prevent sites manipulating spoofing pagerank little details provided google factors actually affect it

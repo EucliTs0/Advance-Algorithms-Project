@@ -1,0 +1,2 @@
+a algebraic model representing text documents objects general vectors identifiers index terms it se orao fiter information retrieval eilevay ning it fir e information retrieval
+a document represent vector e dimension preie reate searate term he  tem dfine epe entire application typically terms single words keywords longer phrases he dimensionality vector number words vocabulary words cose erms so rle aplies keywords idee ong hrasesite ccs document lr one different ay outing als atia o terms pe oe os sceesetin

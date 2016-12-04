@@ -1,0 +1,26 @@
+pagerank pr refers concept google system used
+ranking importance pages web the pagerank
+site refers importance value web relation
+rest sites pageranked
+
+the algorithm basically works like popularity contest site
+linked popular websites site considered
+popular however pr doesnt apply website whole
+different pages within website get given different prs dependent
+number factors
+
+ inbound links backlinks many pages other ones website link particular page
+
+ outbound links forward links many external pages particular page links
+
+ dangling links many pages external links linked particular page
+
+ deep links many links home page linked particular page
+
+pr tries emulate random surfer the algorithm includes
+dampening factor probability random surfer
+get bored go visit new page  default 085 a
+variation intentional surfer importance
+page based actual visits sites users this method
+used google toolbar reports back actual site visits
+google

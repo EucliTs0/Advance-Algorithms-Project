@@ -1,0 +1,5 @@
+pagerank link analysis algorithm used google tert a ie in nerical tin hyperlinked set documents world wide web purpose measuring reernce the e agra ae ole en proc atns en the numerical weight assigns given element e also called pagerank e denoted pre
+the name pagerank trademark google pagerank process patented us patent 6285999  however patent assigned stanford university google google exclusive license rights patent stanford university
+in words pagerank results ballot among pages world wide web important page is a hyperlink page counts vote support the pagerank page defined recursively depends number pagerank metric pages link incoming links
+numerous academic papers concerning pagerank published since page brins original paper in practice pagerank concept proven vulnerable manipulation extensive research devoted identifying falsely inflated pagerank ways ignore links documents falsely inflated pagerank
+

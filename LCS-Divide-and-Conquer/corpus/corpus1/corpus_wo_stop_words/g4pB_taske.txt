@@ -1,0 +1,28 @@
+in mathematics computer science dynamic programming method solving problems exhibit properties overlapping subproblems optimal substructure
+
+the word programming dynamic programming particular connection computer programming all instead comes term mathematical programming synonym optimization programming sense means finding acceptable plan action algorithm
+
+optimal substructure means optimal solutions subproblems used find optimal solutions overall problem in general solve problem optimal substructure using threestep process
+
+1 break problem smaller subproblems
+2 solve problems optimally using threestep process recursively
+3 use optimal solutions construct optimal solution original problem
+
+the subproblems are themselves solved dividing subsubproblems on reach simple case solvable constant time
+
+to say problem overlapping subproblems say subproblems used solve many different larger problems for example fibonacci sequence f3  f1  f2 f4  f2  f3 computing number involves computing f2 because f3 f4 needed compute f5 naive approach computing f5 may end computing f2 twice more this applies whenever overlapping subproblems present naive approach may waste time recomputing optimal solutions subproblems already solved
+
+in order avoid this instead save solutions problems already solved then need solve problem later retrieve reuse alreadycomputed solution if sure wont need particular solution anymore throw away save space in cases even compute solutions subproblems know well need advance
+
+dynamic programming makes use of
+
+overlapping subproblems
+optimal substructure
+memoization
+
+dynamic programming usually takes one two approaches
+
+topdown approach
+bottomup approach
+
+

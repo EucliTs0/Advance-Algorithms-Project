@@ -1,0 +1,23 @@
+bayes theorem bayes rule something called bayesian reasoning
+the bayesian conspiracy multinational interdisciplinary shadowy group scientists controls publication grants tenure illicit traffic grad students the best way accepted bayesian conspiracy join campus crusade bayes high school college gradually work way inner circles 
+bayes theorem
+
+
+let sets conditional probability requires
+1
+denotes intersection and also
+2
+therefore
+3
+now let
+4
+event 
+5
+6
+but written
+7
+
+
+
+
+this paper proposes new measure called scaled inverse document frequency sidf evaluates conditional specificity query terms subset s d without making assumption term independence s estimated search results or searches computed inverted index data we evaluated sidf values commercial search engines submitting queries relevant financial investment domain results compare favorably across search engines queries our approach practical applications realworld scenarios like web mining homeland security keyworddriven marketing research scenarios

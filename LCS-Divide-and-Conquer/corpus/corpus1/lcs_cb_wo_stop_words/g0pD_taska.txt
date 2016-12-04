@@ -1,0 +1,5 @@
+in objectoriented programming way form new classes using classes already defined the new classes known derived classes inherit attributes behavior existing classes referred base classes  tle it intended help reuse existing code ittica accomple eiter erriing ne methos esed nesto ai ne metods sed cetr
+
+inheritance also sometimes called generalization isa relationships represent hierarchy classes objects fr instance generalization orange mango many others one consider fruit abstraction apple orange etc since apples fruit ie apple isa fruit apples may naturally inherit properties common fruit fleshy container seed plant
+
+an advantage inheritance modules sufficiently similar interfaces share lot code reducing complexity program

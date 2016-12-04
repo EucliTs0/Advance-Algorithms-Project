@@ -1,0 +1,11 @@
+vector space model term vector model also known algebraic model representing objects although mainly used text documents vectors identifiers example index terms it used information retrieval filtering indexing relevancy rankings first used smart information retrieval system
+
+a document represented vector dimension corresponding separate term if term occurs document value nonzero vector many different ways computing values aka term weights developed one best known schemes tfidf weighting
+
+the way term defined depends application typically terms single words keywords sometimes even longer phrases if words chosen terms number dimensions vector number distinct words corpus
+
+relevancy ranks documents keyword search calculated uses assumptions document similarities theory comparing difference angles document vector original query vector query represented format vector documents
+
+generally easier calculate cosine angle vectors instead angle itself a zero value cosine indicates query document vector orthogonal match means query term exist document considered
+
+however vector space model limitations long documents poorly represented due poor similarity values a small scalar product large dimensionality search keywords must match precisely document terms word substrings might result false positive match similar context documents different term vocabulary wont associated leading false negative match order terms appear document represented vector space model

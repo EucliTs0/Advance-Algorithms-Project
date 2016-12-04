@@ -1,0 +1,11 @@
+in mathematics computer science dynamic programming method solving problems exhibit properties overlapping subproblems optimal substructure described below the method takes much less time naive methods
+the term originally used 1940s richard bellman describe process solving problems one needs find best decisions one another by 1953 refined modern meaning the field founded systems analysis engineering topic recognized ieee bellmans contribution remembered name bellman equation central result dynamic programming restates optimization problem recursive form
+the word programming dynamic programming particular connection computer programming all instead comes term mathematical programming synonym optimization thus program optimal plan action produced for instance finalized schedule events exhibition sometimes called program programming sense means finding acceptable plan action algorithm
+optimal substructure means optimal solutions subproblems used find optimal solutions overall problem for example shortest path goal vertex graph found first computing shortest path goal adjacent vertices using pick best overall path shown figure 1 in general solve problem optimal substructure using threestep process
+1 break problem smaller subproblems
+2 solve problems optimally using threestep process recursively
+3 use optimal solutions construct optimal solution original problem
+the subproblems are themselves solved dividing subsubproblems on reach simple case solvable constant time
+figure 2 the subproblem graph fibonacci sequence that tree dag indicates overlapping subproblems
+to say problem overlapping subproblems say subproblems used solve many different larger problems for example fibonacci sequence f3  f1  f2 f4  f2  f3 computing number involves computing f2 because f3 f4 needed compute f5 naive approach computing f5 may end computing f2 twice more this applies whenever overlapping subproblems present naive approach may waste time recomputing optimal solutions subproblems already solved
+in order avoid this instead save solutions problems already solved then need solve problem later retrieve reuse alreadycomputed solution this approach called memoization not memorization although term also fits if sure wont need particular solution anymore throw away save space in cases even compute solutions subproblems know well need advance

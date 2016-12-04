@@ -1,0 +1,4 @@
+in objectoriented programming new class ed using classes already defined these classes eior attributes existn classes refr e es ranceoct inten e reuse existing code itt modification
+
+inheritance oes ses categorizimer auas catgorize i ao proes a generalize du i  relationshi clss for ee o eeaiatinanal smiarl is eats eeni classes os fine trite eaors oen aial one cs ceaers ul naturly inhert properties commn ilste advantage inheritance les uiet similar intea shar code reducing complexity program inheritance therefore aoered polymorphism many pieces code controled shared control code
+inheritance accomplished overriding methods ancestor adding new methods

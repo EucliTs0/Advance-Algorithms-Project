@@ -1,0 +1,3 @@
+in computer science dynamic programming  solving problems ois overlapping subproblems optimal substructure the method ecet naive methods
+the term oined 1940s richard bellman describe process solving problems need find best decisions one n 1953 refined modern meaning the field founded systems analysis engineering topic recognized ieee bellman equation central result dynamic programming restates optimization problem recursive form
+dynamic programming tl connection computer programming all instead comes term mathematical programming synonym optimization thus program t plan action produced for instance events schedule exhiition sometimes called program programming means finding plan action

@@ -1,0 +1,6 @@
+the vector space model document viewed bag words order little significance each document vector word dimension the vector constucted frequency eacher word dimension the draw back approach length document inpact vector compensate comput cosine similarity two comparism documents this find difference two vectors the dot product ignoreing size them
+
+inorder query search space query also represented vector find document whos vector greatest cosine similarities query there number wighting sceems incoperated inorder increase accuracy vextors
+
+there drawbacks approach computing cosine similarities vector expensive number dimensions thousands to tackle problem use inverted indexs series heuristics inorder inprove this
+top

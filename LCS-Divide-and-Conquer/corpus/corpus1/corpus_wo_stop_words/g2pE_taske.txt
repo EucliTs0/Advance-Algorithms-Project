@@ -1,0 +1,5 @@
+dynamic programming dp basic terms algorithm design technique used optimization problems often involves minimizing maximizing
+furthermore combining solutions subproblems dp solves problems subproblems may include contain many subsubproblems even cases solution one subproblem may affect solutions subproblems involved problem
+by solving subproblems bottomup fashion basically storing solution subproblem first time solved looking find solution subproblem come across more would cause dp reduce computations
+the following generalization path taken dynamic programming
+firstly needed characterize structure optimal solution secondly define value optimal solution recursively furthermore compute optimal solution values either following topdown method caching bottomup method table the last point would construct optimal solution computed values

@@ -1,0 +1,6 @@
+pagerank probability distribution used represent likelihood person randomly clicking links arrive particular page  it assumed several research papers distribution evenly divided documents collection beginning computational process pagerank calculated collections documents size the pagerank computations require several passes called iterations collection adjust approximate pagerank values closely reflect theoretical true value
+a probability expressed numeric value 0 1 a 0 5 probability commonly expressed 50 chance something happening hence pagerank 05 means 50 chance person clicking random link directed document 05 pagerank
+simplified algorithm
+how pagerank works
+assume small universe four web pages a b c d the initial approximation pagerank would evenly divided four documents hence document would begin estimated pagerank 025
+in original form pagerank initial values simply 1 this meant sum pages total number pages web later versions pagerank see formulas would assume probability distribution 0 1 here were going simply use probability distribution hence initial value 025

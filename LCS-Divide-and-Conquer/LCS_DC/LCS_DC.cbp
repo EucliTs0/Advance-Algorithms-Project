@@ -37,9 +37,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../LCS_Divide_and_Conquer.cpp" />
+		<Unit filename="../analysis_test.cpp" />
+		<Unit filename="../lcsdc.cpp" />
 		<Unit filename="../lcsdc.h" />
+		<Unit filename="../lcsrecursive.cpp" />
 		<Unit filename="../test.cpp" />
+		<Unit filename="../test_comparisson.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

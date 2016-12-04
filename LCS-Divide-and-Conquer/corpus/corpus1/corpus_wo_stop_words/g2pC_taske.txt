@@ -1,0 +1,5 @@
+dynamic programming problemsolving method solves recursive problems the term derived mathematical programming commonly referred optimisation hence dynamic programming optimal method solving problems takes much less time nave methods
+
+dynamic programming uses properties optimal substructure overlapping subproblems memoization create algorithm solve problems optimal substructure means structure problem made subproblems used find solution problem overall a problem overlapping subproblems means subproblems may used solve many different larger problems each subproblem solved divided subsubproblems case reached solvable constant time memoization stores solutions already computed order reduce unnecessary recomputation
+
+dynamic programming divided two main approaches topdown bottomup the topdown approach breaks problem subproblems solved remembered using combination memoization recursion the bottomup approach solves subproblems might need advance uses solutions build solutions bigger problem

@@ -1,0 +1,8 @@
+in probability theory bayes theorem o called bayes law rev thomas bayes res conditional marginal probabilities two random events it often used cute posterior probabilities given observations for example patient may observed certain symptoms bayes theorem used cute ili proposed ansis cre given observation
+as fal theorem bayes theorem valid n interpretations probability however plays ental role debate around foundations statistics frequentist bayesian interpretations disagree ways probabilities assigned applicationsfrequentists assign probabilities random events according frequencies en subsets populations proportions whole bayesians describe probabilities terms beliefs degrees uncertainty the articles bayesian probability frequentist probability discuss debates greater detail
+bayes theorem res conditional marginal probabilities events a b b nonvanishing probability
+each term bayes theorem conventional name
+pa prio probability a it prio sense take account information b
+pab conditional probability a given b it also called st probability derived depends upon specified value b
+pba conditional probability b given a
+pb prvious

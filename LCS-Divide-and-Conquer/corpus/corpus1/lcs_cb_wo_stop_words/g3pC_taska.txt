@@ -1,0 +1,6 @@
+in objectoriented programming inheritance way form new classesinstances called objects using classes already
+defined
+
+inheritance also sometimes called generalization isarelationships represent hierarchy classes objects forinstance fruit generalization apple orange mangomany others one consider fruit abstraction appleorange etc conversely since apples fruit ie apple isafruit apples may naturally inherit properties commonruit fleshy container seed plant
+
+inheritance typically accomplished either overriding replacingone methods exposed ancestor adding new methodsexposed ancestor
