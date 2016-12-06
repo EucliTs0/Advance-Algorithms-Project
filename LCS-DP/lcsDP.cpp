@@ -18,6 +18,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+void printNeatly(string, int);
 string pNgreedy(string text, int);
 void lcs(string str1, string str2) {
     int n = str1.size();
@@ -62,6 +63,9 @@ void lcs(string str1, string str2) {
     cout <<"Length of LCS is: " << result << "\n";
     cout << endl;
 
+    cout << "LCS Score: " << double(result / double(m))*100 << "%" << "\n";
+    cout << endl;
+
     //Print the LCS
     vector<char> printlcs;
     while (c[tmp1][tmp2] != 0) {
@@ -85,7 +89,13 @@ void lcs(string str1, string str2) {
 
 
     //Print neatly the LCS
-    cout << pNgreedy(s, l) << "\n";
+    //cout << pNgreedy(s, l) << "\n";
+    cout << "Using Printing Neatly Dynamic Programming on LCS ";
+    cout << "\n";
+    cout << endl;
+    printNeatly(s, l);
+    cout << "\n";
+    cout << endl;
 
     /*while (it != printlcs.end()) {
         cout << *it;
