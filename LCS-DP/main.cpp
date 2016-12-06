@@ -21,13 +21,14 @@ using namespace std;
 
 void lcs(string, string);
 string pNgreedy(string, int);
-void printNeatly(vector<string>, int);
+void printNeatly(string, int);
 char *lcs2(char*, char*);
 char *convert(const std::string & s);
 bool validUTF8_file(const char*);
 void fix_utf8_string(string&);
 //void remove_sw(string, string);
 void stripChars(string&);
+string lcs_DnC(string , string);
 
 
 int main() {
@@ -35,12 +36,12 @@ int main() {
     int n = 70;
     int L;
     //Checking if files are in utf8 encoding
-    validUTF8_file("corpus/g0pA_taska.txt");
-    validUTF8_file("corpus/orig_taska.txt");
+    validUTF8_file("corpus/g2pC_taskd.txt");
+    validUTF8_file("corpus/orig_taskd.txt");
         ifstream mytextfile;
 
     try {
-        mytextfile.open("corpus/g0pA_taska.txt");
+        mytextfile.open("corpus/g2pC_taskd.txt");
         if (!mytextfile) {
             cout << "Error opening file " << endl;
             return 1;
@@ -54,7 +55,7 @@ int main() {
     ifstream originalfile;
 
     try {
-        originalfile.open("corpus/orig_taska.txt");
+        originalfile.open("corpus/orig_taskd.txt");
         if (!originalfile) {
             cout << "Error opening file " << endl;
             return 1;
@@ -85,18 +86,6 @@ int main() {
     string dict = temp.str();
 
 
-
-    /* for (int i = 0; i < n; i++)
-	{
-		cout << i % 10;
-	}
-	cout << "  |  padding spaces" << endl;
-	cout << "<";
-	for (int i = 0; i < n - 2; i++)
-	{
-		cout << "-";
-	}
-	cout << ">  |" << endl; */
 
         vector<string> words;
         vector<string> words_original;
@@ -169,25 +158,30 @@ int main() {
         stripChars(original_text);
 
         //From string to char*
-        char* wordsc = new char[text.length() + 1];
+        /*char* wordsc = new char[text.length() + 1];
         char* words_originalc = new char [original_text.length() + 1];
         strcpy(wordsc, text.c_str());
-        strcpy(words_originalc, original_text.c_str());
+        strcpy(words_originalc, original_text.c_str());*/
 
-        cout << pNgreedy(text, n) << "\n";
+        printNeatly(text, n);
+        cout << "\n";
         cout << endl;
 
 
-        cout << pNgreedy(original_text, n) << "\n";
+        //cout << pNgreedy(original_text, n) << "\n";
+        printNeatly(original_text, n);
+        cout << "\n";
         cout << endl;
 
         //Print the LCS
+        //string r = lcs_DnC(text, original_text);
+        //cout << r;
          lcs(text, original_text);
 
 
 
-    delete [] wordsc;
-    delete [] words_originalc;
+    //delete [] wordsc;
+    //delete [] words_originalc;
 
     return 0;
 
