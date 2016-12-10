@@ -1,0 +1,338 @@
+#include <iostream>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <cmath>
+#include <time.h>
+//#include <boost/container/vector.hpp>
+
+using namespace std;
+/*
+    @wId: index of word in common Words.
+    @textIndex: index of text that word belongs to it.
+    @wordIndex: index of word inside its belonging text.
+*/
+struct Node{ unsigned wId; unsigned textIndex; unsigned wordIndex; };
+struct Word{ string word; vector<Node> foundNodes; };
+
+time_t startTime,endTime;
+vector<string> firstTextWords;
+vector<string> secondTextWords;
+vector<Word> firstCommonWords;
+vector<Word> secondCommonWords;
+vector<Node> firstCommonNodes;
+vector<Node> secondCommonNodes;
+long unsigned numCall = 0;
+long unsigned numOfBranching = 0;
+bool reachedToUpperBound = false;
+unsigned bestLcsLength=0;
+unsigned upperBound;
+
+string GetFileInfo(string fileaddress){
+    char pause;
+    string fileinfo = "";
+    ifstream input;
+    input.open(fileaddress.c_str());
+    if (input.is_open()){
+        char ch;
+        while (input.get(ch))
+        {
+            fileinfo+=ch;
+        }
+        input.close();
+    }
+    else{
+        cout << "File Not Found: " << fileaddress << endl;
+        cin >> pause;
+        exit(0);
+    }
+    return fileinfo;
+}
+
+void AddWordToCommon(unsigned textIndex, unsigned wordIndex){
+    unsigned counter = 0;
+    vector<string> *words;
+    vector<Word> *commonWords;
+    vector<Word> *other;
+    if (textIndex == 1){
+        commonWords = &firstCommonWords;
+        words = &firstTextWords;
+        other = &secondCommonWords;
+    }
+    else{
+        commonWords = &secondCommonWords;
+        words = &secondTextWords;
+        other = &firstCommonWords;
+    }
+    bool flag = false;
+    Node node = { 0,textIndex, wordIndex };
+    while (!flag && counter<commonWords->size()){
+        if ((*commonWords)[counter].word == (*words)[wordIndex]){
+            node.wId = counter;
+            (*commonWords)[counter].foundNodes.push_back(node);
+            flag = true;
+        }
+        counter++;
+    }
+    if (!flag){
+        string newString = (*words)[wordIndex];
+        vector<Node> vec;
+        node.wId = commonWords->size();
+        vec.push_back(node);
+        Word newWord;
+        newWord.word = newString;
+        other->push_back(newWord);
+        Word word = { newString, vec };
+        commonWords->push_back(word);
+    }
+}
+
+void DetectAndAddWords(const string &text, unsigned textIndex){
+    vector<string> * words;
+    string str = "";
+    if (textIndex == 1){
+        words = &firstTextWords;
+        str = "\nNumber of Words in First Text: ";
+    }
+    else{
+        words = &secondTextWords;
+        str = "\nNumber of Words in Second Text: ";
+    }
+    unsigned pointer = 0;
+    while (pointer != text.size()){
+        bool flag = true;
+        string word = "";
+        while (pointer != text.size() && flag){
+            char ascii = text[pointer++];
+            if (ascii >= 65 && ascii <= 91){
+                // Uppers case to Lower case
+                ascii += 32;
+            }
+
+            if (ascii >= 97 && ascii < 123){
+                word += ascii;
+            }
+            else{
+                flag = false;
+            }
+        }
+        if (word.size()>0){
+            words->push_back(word);
+        }
+    }
+    cout << str << words->size() << endl;
+}
+
+void CalculateUpperBound(){
+    upperBound = 0;
+
+    for (unsigned i = 0; i<firstCommonWords.size() && i<secondCommonWords.size(); i++){
+        unsigned firstSize = firstCommonWords[i].foundNodes.size();
+        unsigned secondSize = secondCommonWords[i].foundNodes.size();
+        upperBound += firstSize ? secondSize : firstSize<secondSize;
+    }
+    cout << "\nUpperBound: " << upperBound << endl;
+}
+
+void CalculateCommoneWords(){
+    for (unsigned i = 0, j = 0; i<firstTextWords.size() || j<secondTextWords.size();){
+        if (i<firstTextWords.size()){
+            AddWordToCommon(1, i);
+            i++;
+        }
+
+        if (j<secondTextWords.size()){
+            AddWordToCommon(2, j);
+            j++;
+        }
+    }
+}
+
+void RemoveNonCommon(){
+    vector<Word> firstCommon = firstCommonWords;
+    vector<Word> secondCommon = secondCommonWords;
+    firstCommonWords = vector<Word>();
+    secondCommonWords = vector<Word>();
+    for (unsigned i = 0; i<firstCommon.size() && i<secondCommon.size(); i++){
+        if (firstCommon[i].foundNodes.size() != 0 && secondCommon[i].foundNodes.size() != 0){
+            firstCommonWords.push_back(firstCommon[i]);
+            secondCommonWords.push_back(secondCommon[i]);
+        }
+    }
+}
+
+void ReadAndPreprocessTexts(){
+    string folder = "D:\\LCS\\test_case_branch_and_bound\\";
+    string firstFile = folder + "X_11.txt";
+    string secondFile = folder + "Y_11.txt";
+    string firstText = GetFileInfo(firstFile);
+    string secondText = GetFileInfo(secondFile);
+    cout << "First file's text length: " << firstText.size() << endl;
+    cout << "Second file's text length: " << secondText.size() << endl;
+
+    DetectAndAddWords(firstText, 1);
+    DetectAndAddWords(secondText, 2);
+
+    CalculateCommoneWords();
+
+    CalculateUpperBound();
+    RemoveNonCommon();
+}
+
+
+vector<Node> MergeNodes(const vector<Node>& vec1,const vector<Node>& vec2){
+    vector<Node> ans;
+    unsigned idx = 0, jdx = 0;
+    for (; idx < vec1.size() && jdx < vec2.size();){
+        if (vec1[idx].wordIndex < vec2[jdx].wordIndex){
+            ans.push_back(vec1[idx]);
+            idx++;
+        }
+        else{
+            ans.push_back(vec2[jdx]);
+            jdx++;
+        }
+
+    }
+    for (; idx < vec1.size(); idx++){
+        ans.push_back(vec1[idx]);
+    }
+    for (; jdx < vec2.size();jdx++){
+        ans.push_back(vec2[jdx]);
+    }
+
+    return ans;
+}
+
+vector<Node> SortFirstCommonNodes(){
+    vector<Node> ans;
+    while (firstCommonWords.size() != 1){
+        unsigned idx = 0;
+        while (idx < firstCommonWords.size()-1){
+            firstCommonWords[idx].foundNodes = MergeNodes(firstCommonWords[idx].foundNodes,firstCommonWords.back().foundNodes);
+            idx++;
+            firstCommonWords.pop_back();
+        }
+    }
+    ans = vector<Node>(firstCommonWords[0].foundNodes);
+    firstCommonWords.clear();
+    return ans;
+}
+
+vector<Node> SortSecondCommonNodes(){
+    vector<Node> ans;
+
+    while (secondCommonWords.size() != 1){
+        unsigned idx = 0;
+        while (idx < secondCommonWords.size()-1){
+            secondCommonWords[idx].foundNodes = MergeNodes(secondCommonWords[idx].foundNodes, secondCommonWords.back().foundNodes);
+            idx++;
+            secondCommonWords.pop_back();
+        }
+    }
+    ans = vector<Node>(secondCommonWords[0].foundNodes);
+    secondCommonWords.clear();
+    return ans;
+}
+
+void SortCommonNodes(){
+    firstCommonNodes = SortFirstCommonNodes();
+    secondCommonNodes = SortSecondCommonNodes();
+}
+
+string Longest(const string &first,const string &second){
+    return first.size() > second.size() ? first : second;
+}
+
+bool IsInfeasible(const unsigned firstIndex,const unsigned secondIndex,const unsigned parentLcsLength){
+    long unsigned firstSize = firstIndex - parentLcsLength +bestLcsLength;
+    long unsigned secondSize = secondIndex - parentLcsLength + bestLcsLength;
+    bool cond1 = firstSize > firstTextWords.size();
+    bool cond2 = secondSize > secondTextWords.size();
+    if (cond1 || cond2){
+        return true;
+    }
+    return false;
+}
+
+/*
+    @parentLcsLength: Number of Words in Lcs in parent node.
+*/
+string LCS(const unsigned firstIndex,const unsigned secondIndex,const unsigned parentLcsLength){
+    string lcs="";
+
+    if (numCall % 20000 == 0){
+        cin.get();
+    }
+
+    numCall++;
+    cout << "\nNumber of Calls to LCS: " << numCall<<endl;
+    cout << "firstIndex: " << firstIndex << " ,  secondIndex: " << secondIndex << endl;
+    cout << "Best LCS Length: " << bestLcsLength<<" words"<< endl;
+    cout << "Parent LCS Length: " << parentLcsLength <<" words"<< endl;
+    //if (parentLcsLength)
+    if (!reachedToUpperBound && !IsInfeasible(firstIndex,secondIndex,parentLcsLength)){
+        cout << "No of Branchings: " <<numOfBranching<< endl;
+        time_t now=time(NULL);
+        cout<<"Time Passed Till Now: "<<now-startTime<<endl;
+        if (firstIndex == firstCommonNodes.size() || secondIndex == secondCommonNodes.size()){
+            lcs = "";
+        }
+        else if (firstCommonNodes[firstIndex].wId == secondCommonNodes[secondIndex].wId){
+            string word = firstTextWords[firstCommonNodes[firstIndex].wordIndex];
+            lcs = word + " " + LCS(firstIndex + 1, secondIndex + 1,parentLcsLength+1);
+            if (bestLcsLength < parentLcsLength + 1){
+                bestLcsLength = parentLcsLength + 1;
+            }
+            numOfBranching++;
+        }
+        else{
+            if(firstCommonNodes[firstIndex+1].wId == secondCommonNodes[secondIndex].wId){
+                string tmp1 = LCS(firstIndex + 1, secondIndex, parentLcsLength);
+                string tmp2 = LCS(firstIndex, secondIndex + 1, parentLcsLength);
+                lcs = Longest(tmp1,tmp2);
+            }else if(firstCommonNodes[firstIndex].wId == secondCommonNodes[secondIndex+1].wId){
+                string tmp1 = LCS(firstIndex, secondIndex + 1, parentLcsLength);
+                string tmp2 = LCS(firstIndex + 1, secondIndex, parentLcsLength);
+                lcs = Longest(tmp1,tmp2);
+            }else if (abs((long)(firstIndex + 1 - secondIndex)) < abs((long)(firstIndex - secondIndex - 1))){
+                string tmp1 = LCS(firstIndex + 1, secondIndex, parentLcsLength);
+                string tmp2 = LCS(firstIndex, secondIndex + 1, parentLcsLength);
+                lcs = Longest(tmp1,tmp2);
+            }
+            else{
+                string tmp1 = LCS(firstIndex, secondIndex + 1, parentLcsLength);
+                string tmp2 = LCS(firstIndex + 1, secondIndex, parentLcsLength);
+                lcs = Longest(tmp1,tmp2);
+            }
+            numOfBranching++;
+        }
+    }
+    if (lcs.size() == upperBound){
+        reachedToUpperBound = true;
+    }
+    return lcs;
+}
+
+int main()
+{
+    char ans = 'n';
+    do{
+        ReadAndPreprocessTexts();
+        SortCommonNodes();
+
+        startTime=time(NULL);
+        string lcs = LCS(0,0,0);
+        endTime=time(NULL);
+
+        cout << "LCS= " << lcs << endl << endl;
+        cout << "LCS Length: " << lcs.size()<<endl;
+        cout<< "Overall Time: "<<endTime-startTime<<endl;
+
+        cout << "\nDo you wish to continue(y/n)? ";
+        cin >> ans;
+    } while (ans == 'y' || ans == 'Y');
+    return 0;
+}
+
